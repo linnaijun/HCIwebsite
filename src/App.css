@@ -63,7 +63,7 @@
   }
   to {
     opacity: 0;
-    transform: translateX(-100px); /* 增加移动距离以强化效果 */
+    transform: translateX(-50px); /* 增加移动距离以强化效果 */
   }
 }
 
@@ -71,7 +71,7 @@
 @keyframes fadeInFromRight {
   from {
     opacity: 0;
-    transform: translateX(-100px); /* 增加移动距离以强化效果 */
+    transform: translateX(-50px); /* 增加移动距离以强化效果 */
   }
   to {
     opacity: 1;
