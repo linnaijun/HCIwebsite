@@ -12,6 +12,15 @@ function App() {
       behavior: 'smooth' // 這將使滾動動作平滑進行
     });
   };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop-60,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const [currentText, setCurrentText] = useState('初始文字');
   const [newText, setNewText] = useState('');
@@ -72,28 +81,23 @@ function App() {
   return (
 
     <div className="App">
+    <div className="header">
+      <button className="linkButton" onClick={() => scrollToSection('title')}>標題</button>
+      <button className="linkButton" onClick={() => scrollToSection('introduction')}>介紹</button>
+      <button className="linkButton" onClick={() => scrollToSection('album')}>相冊</button>
+    </div>
+    <div className="content" style={{paddingTop: '60px'}}> {/* 添加顶部留白以避免内容被标题栏遮挡 */}
       <div className="fixedBox">
         <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
       </div>
-
-      <Title height="1000px" />
-      <Introduction height="2000px" />
-      <Album height="3000px" />
+      <Title height="1000px" id="title"/>
+      <Introduction height="2000px" id="introduction"/>
+      <Album height="3000px" id="album"/>
       <button onClick={scrollToTop} className="scrollToTopButton"></button>
-
-
     </div>
+  </div>
   );
 }
-const buttonStyle = {
-  position: 'fixed',
-  bottom: '20px',
-  right: '20px',
-  cursor: 'pointer',
-  width: '150px', // 按鈕的寬度
-  height: '150px', // 按鈕的高度
-  padding: '10px', // 如果需要的話，增加一些內邊距來增加點擊區域
 
-};
 
 export default App;

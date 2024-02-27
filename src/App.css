@@ -23,6 +23,32 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* 您可以根据需要更改颜色 */
+  color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around; /* 确保按钮平均分布 */
+  padding: 10px 0;
+}
+
+.linkButton {
+  background-color: #444; /* 按钮背景颜色 */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px; /* 可选的圆角 */
+}
 
 .App-link {
   color: #61dafb;
