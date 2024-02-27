@@ -27,6 +27,34 @@
 .App-link {
   color: #61dafb;
 }
+.fixedBox {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 200px;
+  background-color: #333;
+  display: flex; /* 使用 flexbox 來居中文字 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+.verticalText {
+  writing-mode: vertical-rl; /* 將文字設置為直式顯示 */
+  transform: rotate(0deg); /* 將文字旋轉以適應從上到下的閱讀順序 */
+  color: white; /* 文字顏色 */
+  font-size: 16px; /* 文字大小 */
+}
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
 
 @keyframes App-logo-spin {
   from {
