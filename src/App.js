@@ -40,7 +40,7 @@ function App() {
       const timer = setTimeout(() => {
         setCurrentText(newText); // 更新文本
         setNewTextAnimation('fadeInFromRight'); // 启动淡入动画
-      }, 300); // 假设动画持续时间为 500ms
+      }, 200); // 假设动画持续时间为 500ms
       return () => clearTimeout(timer);
     }
   }, [newTextAnimation, newText]);
