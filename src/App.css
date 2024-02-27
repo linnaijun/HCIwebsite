@@ -55,6 +55,37 @@
   height: 150px;
   padding: 10px;
 }
+/* 向左淡出动画 */
+@keyframes fadeOutToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px); /* 增加移动距离以强化效果 */
+  }
+}
+
+/* 向右淡入动画 */
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px); /* 增加移动距离以强化效果 */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeOutToLeft {
+  animation: fadeOutToLeft 0.3s forwards;
+}
+
+.fadeInFromRight {
+  animation: fadeInFromRight 0.3s forwards;
+}
 
 @keyframes App-logo-spin {
   from {
