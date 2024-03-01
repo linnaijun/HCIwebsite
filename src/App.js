@@ -82,7 +82,7 @@ function App() {
 
     <div className="App">
     <div className="header">
-      <button className="linkButton" onClick={() => scrollToSection('title')}>標題</button>
+      <button className="linkButton" onClick={() => scrollToSection('title')}>標題123123</button>
       <button className="linkButton" onClick={() => scrollToSection('introduction')}>介紹</button>
       <button className="linkButton" onClick={() => scrollToSection('album')}>相冊</button>
     </div>
