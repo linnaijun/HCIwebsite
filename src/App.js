@@ -24,7 +24,7 @@ function App() {
 
   const [currentText, setCurrentText] = useState('標題');
   const [newText, setNewText] = useState('標題');
-  const [newTextAnimation, setNewTextAnimation] = useState(''); // 定义 newTextAnimation 状态及其更新函数
+  const [newTextAnimation, setNewTextAnimation] = useState('標題'); // 定义 newTextAnimation 状态及其更新函数
 
 
   useEffect(() => {
