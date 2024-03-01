@@ -26,6 +26,9 @@ function App() {
   const [newText, setNewText] = useState('標題');
   const [newTextAnimation, setNewTextAnimation] = useState('標題'); // 定义 newTextAnimation 状态及其更新函数
 
+  useEffect(() => {
+    document.title = "網頁標題";
+  }, []); // 空依賴數組表示這個效果只會在組件掛載時運行一次
 
   useEffect(() => {
     // 当 newText 改变并且与 currentText 不同时，启动淡出动画
