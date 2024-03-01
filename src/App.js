@@ -1,11 +1,11 @@
 import Title from './Title';
 import Introduction from './Introduction';
 import Album from './Album';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('');
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
