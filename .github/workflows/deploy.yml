@@ -30,4 +30,4 @@ jobs:
       with:
         branch: gh-pages # GitHub Pages分支
         folder: build # 構建產物所在的目錄
-        token: ${{ secrets.GITHUB_TOKEN }} # 使用GitHub為您提供的token進行部署
+        token: ${{ secrets.GH_TOKEN }} # 使用GitHub為您提供的token進行部署
