@@ -10,12 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3 # 更新为最新版本
+      with:
+        fetch-depth: 0 # 可选，根据需要获取完整历史记录
 
     - name: Setup Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3 # 更新为最新版本
       with:
-        node-version: '14' # 指定Node.js的版本，根據您的項目需求進行調整
+        node-version: '20' # 更新为Node.js 20
 
     - name: Install Dependencies
       run: npm install
