@@ -1,0 +1,42 @@
+.album .photos {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .album .photo {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+  
+  .album .photo.fade {
+    opacity: 0.5; /* 調整為所需的淡入淡出強度 */
+  }
+  .photo-container {
+    width: 50px; /* 更新裁剪后的宽度为50px */
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 75px; /* 更新左右间距，保持视觉上的平衡 */
+    
+    transition: width 0.5s ease; /* 平滑过渡效果 */
+  }
+  
+  .photo-container img {
+    width: 200px; /* 确保图片的原始宽度是200px */
+    transform: translateX(-50px);
+    transition: transform 0.5s ease; /* 平滑过渡效果 */
+  }
+  
+  .photo-container.expanded {
+    width: 200px; /* 点击后容器宽度增加至200px */
+  }
+  
+  .photo-container img.expanded {
+    transform: translateX(0); /* 点击后取消平移效果 */
+  }
+  
+  
+  
+  
