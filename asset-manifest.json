@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.f57d442f.css",
-    "main.js": "/HCIwebsite/static/js/main.bf130a16.js",
+    "main.css": "/HCIwebsite/static/css/main.50b174a8.css",
+    "main.js": "/HCIwebsite/static/js/main.9dbe18ff.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
     "index.html": "/HCIwebsite/index.html",
-    "main.f57d442f.css.map": "/HCIwebsite/static/css/main.f57d442f.css.map",
-    "main.bf130a16.js.map": "/HCIwebsite/static/js/main.bf130a16.js.map",
+    "main.50b174a8.css.map": "/HCIwebsite/static/css/main.50b174a8.css.map",
+    "main.9dbe18ff.js.map": "/HCIwebsite/static/js/main.9dbe18ff.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f57d442f.css",
-    "static/js/main.bf130a16.js"
+    "static/css/main.50b174a8.css",
+    "static/js/main.9dbe18ff.js"
   ]
 }
