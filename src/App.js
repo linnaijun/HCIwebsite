@@ -31,7 +31,7 @@ function App() {
   const [newText, setNewText] = useState('標題');
   const [newTextAnimation, setNewTextAnimation] = useState('標題'); // 定义 newTextAnimation 状态及其更新函数
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true); // 默认为true，使侧边栏可见
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false); // 默认为true，使侧边栏可见
 
   const COLORS = useMemo(() => ({
     oddSectionBackground: '#7EC0FC',
