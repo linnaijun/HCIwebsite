@@ -6,7 +6,7 @@ import Honors from './Honors';
 import Album from './Album'; // 假设 Album 是相簿组件
 import Camp from './Camp';
 import Contact from './Contact';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 
 function App() {
@@ -32,10 +32,10 @@ function App() {
   const [newTextAnimation, setNewTextAnimation] = useState('標題'); // 定义 newTextAnimation 状态及其更新函数
   const [isMenuOpen, setIsMenuOpen] = useState(false);
  
-  const COLORS = {
-    oddSectionBackground: '#7EC0FC', // 原本的顏色
-    evenSectionBackground: '#004B8F', // 偶數頁面的背景色
-  };
+  const COLORS = useMemo(() => ({
+    oddSectionBackground: '#7EC0FC',
+    evenSectionBackground: '#004B8F',
+  }), []);
   const [sidebarBgColor, setSidebarBgColor] = useState(COLORS.oddSectionBackground); // 初始背景色
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
