@@ -6,7 +6,7 @@ import Honors from './Honors';
 import Album from './Album'; // 假设 Album 是相簿组件
 import Camp from './Camp';
 import Contact from './Contact';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 
 function App() {
@@ -66,7 +66,7 @@ function App() {
 
 
 
-  const handleScroll = () => {
+  const handleScroll =  useCallback(() => {
     const halfWindowHeight = window.innerHeight / 2;
     const scrollPosition = window.pageYOffset + halfWindowHeight;
     
@@ -108,17 +108,15 @@ function App() {
       setNewText('聯絡資訊');
       setSidebarBgColor(COLORS.evenSectionBackground);
     }
-  };
+  },  [setNewText, setSidebarBgColor,COLORS]); 
   
   
   
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]); // Now `handleScroll` is a dependency, so the effect will properly react to its updates
+
 
   return (
     <div className="App">
