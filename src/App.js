@@ -37,7 +37,7 @@ function App() {
   };
   
   useEffect(() => {
-    document.title = "網頁標題";
+    document.title = "研究所";
   }, []); // 空依賴數組表示這個效果只會在組件掛載時運行一次
 
   useEffect(() => {
