@@ -58,20 +58,29 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 100px;
-  height: 200px;
-  background-color: #333;
-  display: flex; /* 使用 flexbox 來居中文字 */
-  align-items: center; /* 垂直居中 */
-  justify-content: center; /* 水平居中 */
+  width: 59px; /* 您可能需要根據Figma設計調整寬度 */
+  height: 290px; /* 您可能需要根據Figma設計調整高度 */
+  background-color: #7EC0FC; /* 設計師提供的背景顏色 */
+  display: inline-flex; /* 從flex修改為inline-flex，但對於固定定位的元素影響不大 */
+  flex-direction: column; /* 沿垂直方向排列子元素 */
+  justify-content: center; /* 垂直居中子元素 */
+  align-items: center; /* 水平居中子元素 */
+  padding: 48px 18px; /* 根據Figma設計調整內距 */
+  border-radius: 0px 20px 20px 0px; /* 添加圓角設計 */
+  color: var(--grey-100-ffffff, #FFF); /* 設定文字顏色 */
+  transition: background-color 0.5s ease;
 }
 
 .verticalText {
-  writing-mode: vertical-rl; /* 將文字設置為直式顯示 */
-  transform: rotate(0deg); /* 將文字旋轉以適應從上到下的閱讀順序 */
-  color: white; /* 文字顏色 */
-  font-size: 16px; /* 文字大小 */
+  writing-mode: vertical-rl; /* 保持文字直立顯示 */
+  transform: rotate(0deg); /* 確保文字方向正確 */
+  font-family: "GenSenRounded TW"; /* 設定特定字體 */
+  font-size: 23px; /* 根據Figma設計調整字體大小 */
+  font-style: normal; /* 字體樣式 */
+  font-weight: 700; /* 字體加粗 */
+  line-height: 120%; /* 設定行高 */
 }
+
 .scrollToTopButton {
   position: fixed;
   bottom: 20px;
@@ -80,6 +89,14 @@
   width: 150px;
   height: 150px;
   padding: 10px;
+}
+.menuButton {
+  display: none; /* 預設不顯示 */
+  /* 添加必要的樣式 */
+}
+
+.links {
+  display: flex; /* 或其他布局 */
 }
 /* 向左淡出动画 */
 @keyframes fadeOutToLeft {
@@ -92,6 +109,67 @@
     transform: translateX(-50px); /* 增加移动距离以强化效果 */
   }
 }
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 5px 0;
+  }
+
+  .linkButton {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 2px 1px;
+  }
+
+  .fixedBox {
+    width: 30 px;
+    height: 166px;
+    font-size: 14px;
+    border-radius: 0px 12px 12px 0px;
+    background: #7EC0FC;
+  }
+
+  .verticalText {
+    font-size: 14px;
+  }
+
+  .scrollToTopButton {
+    width: 100px;
+    height: 100px;
+  }
+  .menuButton {
+    display: block; /* 在小屏幕上顯示菜單按鈕 */
+  }
+
+  .links {
+    display: none; /* 預設隱藏連結 */
+    flex-direction: column; /* 使連結垂直排列 */
+  }
+
+  .links.show {
+    display: flex; /* 當菜單打開時顯示連結 */
+  }
+}
+
+/* 中型裝置（平板） */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .linkButton {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+ 
+
+  .scrollToTopButton {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 
 /* 向右淡入动画 */
 @keyframes fadeInFromRight {
