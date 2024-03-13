@@ -13,6 +13,9 @@
   }
 }
 
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -54,21 +57,25 @@
   color: #61dafb;
 }
 .fixedBox {
+  --translate-x: 0px; /* 定义变量 */
   position: fixed;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
-  width: 59px; /* 您可能需要根據Figma設計調整寬度 */
-  height: 290px; /* 您可能需要根據Figma設計調整高度 */
-  background-color: #7EC0FC; /* 設計師提供的背景顏色 */
-  display: inline-flex; /* 從flex修改為inline-flex，但對於固定定位的元素影響不大 */
-  flex-direction: column; /* 沿垂直方向排列子元素 */
-  justify-content: center; /* 垂直居中子元素 */
-  align-items: center; /* 水平居中子元素 */
-  padding: 48px 18px; /* 根據Figma設計調整內距 */
-  border-radius: 0px 20px 20px 0px; /* 添加圓角設計 */
-  color: var(--grey-100-ffffff, #FFF); /* 設定文字顏色 */
-  transition: background-color 0.5s ease;
+  transform: translateX(var(--translate-x)) translateY(-50%);
+  width: 59px;
+  height: 290px;
+  background-color: #7EC0FC;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 18px;
+  border-radius: 0px 20px 20px 0px;
+  color: var(--grey-100-ffffff, #FFF);
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+.hideSidebar {
+  --translate-x: -100%; /* 更新变量 */
 }
 
 .verticalText {

@@ -31,7 +31,8 @@ function App() {
   const [newText, setNewText] = useState('標題');
   const [newTextAnimation, setNewTextAnimation] = useState('標題'); // 定义 newTextAnimation 状态及其更新函数
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true); // 默认为true，使侧边栏可见
+
   const COLORS = useMemo(() => ({
     oddSectionBackground: '#7EC0FC',
     evenSectionBackground: '#004B8F',
@@ -86,27 +87,35 @@ function App() {
     if (scrollPosition >= positions.title && scrollPosition < positions.faculty) {
       setNewText('標題');
       setSidebarBgColor(COLORS.oddSectionBackground);
+      setIsSidebarVisible(false); // 隐藏侧边栏
     } else if (scrollPosition >= positions.faculty && scrollPosition < positions.thesis) {
-      setNewText('師資');
+      setNewText('研究室指導教授');
       setSidebarBgColor(COLORS.evenSectionBackground);
+      setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.thesis && scrollPosition < positions.topics) {
-      setNewText('論文');
+      setNewText('研究室指導教授');
       setSidebarBgColor(COLORS.oddSectionBackground);
+      setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.topics && scrollPosition < positions.honors) {
-      setNewText('主題');
+      setNewText('研究領域');
       setSidebarBgColor(COLORS.evenSectionBackground);
+      setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.honors && scrollPosition < positions.album) {
       setNewText('榮譽榜');
       setSidebarBgColor(COLORS.oddSectionBackground);
+      setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.album && scrollPosition < positions.camp) {
       setNewText('相簿');
       setSidebarBgColor(COLORS.evenSectionBackground);
+      setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.camp && scrollPosition < positions.contact) {
-      setNewText('營隊');
+      setNewText('冬夏令營');
       setSidebarBgColor(COLORS.oddSectionBackground);
+      setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.contact) {
       setNewText('聯絡資訊');
       setSidebarBgColor(COLORS.evenSectionBackground);
+      setIsSidebarVisible(false); // 隐藏侧边栏
     }
   },  [setNewText, setSidebarBgColor,COLORS]); 
   
@@ -135,8 +144,8 @@ function App() {
       </div>
   
       <div className="content" style={{paddingTop: '60px'}}>
-        <div className="fixedBox" style={{ backgroundColor: sidebarBgColor }}>
-          <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
+      <div className={`fixedBox ${isSidebarVisible ? '' : 'hideSidebar'}`} style={{ backgroundColor: sidebarBgColor }}>
+  <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
         </div>
         <Title height="1000px" id="title"/>
         <Faculty height="800px" id="faculty"/>
