@@ -71,6 +71,7 @@ function App() {
     const titlePosition = document.getElementById('title').offsetTop;
     const introductionPosition = document.getElementById('introduction').offsetTop;
     const campPosition = document.getElementById('camp').offsetTop;
+
   
     // 根据滚动位置更新文本和背景色
     if (scrollPosition >= titlePosition && scrollPosition < introductionPosition) {
@@ -79,6 +80,13 @@ function App() {
     } else if (scrollPosition >= introductionPosition && scrollPosition < campPosition) {
       setNewText('介紹');
       setSidebarBgColor(COLORS.evenSectionBackground);
+    // 计算下一个区块的开始位置作为当前区块的结束条件
+    // 注意：这里假设相册是最后一个区块，所以它的结束条件稍有不同
+    if (scrollPosition >= titlePosition && scrollPosition < introductionPosition) {
+      setNewText('標題');
+    } else if (scrollPosition >= introductionPosition && scrollPosition < campPosition) {
+      setNewText('介紹');
+
     } else if (scrollPosition >= campPosition) {
       setNewText('相冊');
       // 假设相册页面视为奇数页面
@@ -104,6 +112,12 @@ function App() {
     <button className="linkButton" onClick={() => scrollToSection('introduction')}>介紹</button>
     <button className="linkButton" onClick={() => scrollToSection('camp')}>相冊</button>
   </div> </div>
+
+      <button className="linkButton" onClick={() => scrollToSection('title')}>標題</button>
+      <button className="linkButton" onClick={() => scrollToSection('introduction')}>介紹</button>
+      <button className="linkButton" onClick={() => scrollToSection('camp')}>相冊</button>
+    </div>
+
     <div className="content" style={{paddingTop: '60px'}}> {/* 添加顶部留白以避免内容被标题栏遮挡 */}
     <div className="fixedBox" style={{ backgroundColor: sidebarBgColor }}>
         <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
