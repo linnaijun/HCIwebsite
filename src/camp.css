@@ -1,45 +1,35 @@
-.album .photos {
-    display: flex;
-    overflow: hidden;
-  }
-  
-  .album .photo {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    width: 100px;
-    height: 100px;
-    opacity: 1;
-  }
-  
-  .album .photo.fade {
-    opacity: 0.5; /* 調整為所需的淡入淡出強度 */
-  }
-  .photo-container {
-    width: 50px; /* 更新裁剪后的宽度为50px */
-    height: auto;
-    overflow: hidden;
-    display: inline-block;
-    margin: 0 20px; /* 更新左右间距，保持视觉上的平衡 */
-    
-    transition: width 0.5s ease; /* 平滑过渡效果 */
-    border-radius: 20px; /* 添加圆角 */
-  }
-  
-  .photo-container img {
-    width: 200px; /* 确保图片的原始宽度是200px */
-    transform: translateX(-50px);
-    transition: transform 0.5s ease; /* 平滑过渡效果 */
-   
-  }
-  
-  .photo-container.expanded {
-    width: 200px; /* 点击后容器宽度增加至200px */
-  }
-  
-  .photo-container img.expanded {
-    
-    transform: translateX(0); /* 点击后取消平移效果 */
-  }
-  
-  
-  
-  
+.photos {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden; /* 保持滾動功能 */
+  -ms-overflow-style: none;  /* IE和Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.photos::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, 和 Opera */
+}
+
+.photo-container {
+  width: 50px; /* 裁剪后的宽度 */
+  height: auto;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 20px; /* 更新左右间距，保持视觉上的平衡 */
+  transition: width 0.5s ease; /* 平滑过渡效果 */
+  border-radius: 20px; /* 添加圆角 */
+}
+
+.photo-container img {
+  width: 200px; /* 确保图片的原始宽度 */
+  transform: translateX(-50px); /* 初始状态下，图片向左偏移，以适应容器大小 */
+  transition: transform 0.5s ease; /* 平滑过渡效果 */
+}
+
+.photo-container.expanded {
+  width: 200px; /* 点击后容器宽度增加 */
+}
+
+.photo-container img.expanded {
+  transform: translateX(0); /* 点击后取消平移效果 */
+}
