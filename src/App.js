@@ -6,6 +6,7 @@ import Honors from './Honors';
 import Album from './Album'; // 假设 Album 是相簿组件
 import Camp from './Camp';
 import Contact from './Contact';
+import logo from './img/logo.png'; // 导入图片
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 
@@ -130,17 +131,18 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <button className="menuButton" onClick={toggleMenu}>Menu</button>
+      <img src={logo}  alt="Logo" className="logo" />
+        <button className="menuButton" onClick={toggleMenu}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M4 16H28M4 8H28M4 24H28" stroke="#171819" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></button>
+        
         <div className={`links ${isMenuOpen ? 'show' : ''}`}>
-          <button className="linkButton" onClick={() => scrollToSection('title')}>標題</button>
-          <button className="linkButton" onClick={() => scrollToSection('faculty')}>師資</button>
-          <button className="linkButton" onClick={() => scrollToSection('thesis')}>論文</button>
-          <button className="linkButton" onClick={() => scrollToSection('topics')}>主題</button>
+         
+          <button className="linkButton" onClick={() => scrollToSection('faculty')}>研究室介紹</button>
+          <button className="linkButton" onClick={() => scrollToSection('topics')}>研究領域</button>
           <button className="linkButton" onClick={() => scrollToSection('honors')}>榮譽榜</button>
-          <button className="linkButton" onClick={() => scrollToSection('album')}>相簿</button>
-          <button className="linkButton" onClick={() => scrollToSection('camp')}>營隊</button>
-          <button className="linkButton" onClick={() => scrollToSection('contact')}>聯絡資訊</button>
-        </div>
+          <button className="linkButton" onClick={() => scrollToSection('album')}>研究室活動</button>
+         </div>
       </div>
 
       <div className="content" style={{ paddingTop: '60px' }}>
