@@ -6,7 +6,7 @@ import Honors from './Honors';
 import Album from './Album'; // 假设 Album 是相簿组件
 import Camp from './Camp';
 import Contact from './Contact';
-import logo from './img/logo.png'; // 导入图片
+import logo from './img/logo.svg'; // 导入图片
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 
