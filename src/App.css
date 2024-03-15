@@ -238,7 +238,7 @@
     bottom: 15px; /* 在平板上調整位置 */
     right: 15px; /* 在平板上調整位置 */
     padding: 9px; /* 在平板上調整内距 */
-    /* 可以根據需要調整其他樣式 */
+    
   }
 
   .scrollToTopButton:hover {
