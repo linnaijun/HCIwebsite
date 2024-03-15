@@ -185,7 +185,22 @@
   }
 }
 @media (max-width: 768px) {
-
+  .links {
+    display: none; /* 默认隐藏 */
+    flex-direction: column; /* 让按钮垂直排列 */
+    background-color: #fff; /* 白色背景 */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* 添加一些阴影以提升层次感 */
+    position: absolute; /* 绝对定位，使其不影响其他元素的布局 */
+    top: 100%; /* 放在触发元素的正下方 */
+    left: 0;
+    width: 100%; /* 可以根据实际需要调整宽度 */
+    z-index: 100; /* 确保它在其他内容之上 */
+  }
+  
+  .links.show {
+    display: flex; /* 点击菜单按钮时显示 */
+  }
+  
 
   .linkButton {
     padding: 5px 10px;
