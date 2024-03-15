@@ -131,26 +131,26 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-      <img src={logo}  alt="Logo" className="logo" />
-      <button className="menuButton" onClick={toggleMenu}>
-        {isMenuOpen ? (
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M24 8L8 24M8 8L24 24" stroke="#171819" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M4 16H28M4 8H28M4 24H28" stroke="#171819" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        )}
-      </button>
-        
+        <img src={logo} alt="Logo" className="logo" />
+        <button className="menuButton" onClick={toggleMenu}>
+          {isMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M24 8L8 24M8 8L24 24" stroke="#171819" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M4 16H28M4 8H28M4 24H28" stroke="#171819" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          )}
+        </button>
+
         <div className={`links ${isMenuOpen ? 'show' : ''}`}>
-         
+
           <button className="linkButton" onClick={() => scrollToSection('faculty')}>研究室介紹</button>
           <button className="linkButton" onClick={() => scrollToSection('topics')}>研究領域</button>
           <button className="linkButton" onClick={() => scrollToSection('honors')}>榮譽榜</button>
           <button className="linkButton" onClick={() => scrollToSection('album')}>研究室活動</button>
-         </div>
+        </div>
       </div>
 
       <div className="content" style={{ paddingTop: '60px' }}>
