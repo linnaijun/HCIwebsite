@@ -93,10 +93,51 @@
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  width: 150px;
-  height: 150px;
+  width: 50px; /* 初始大小 */
+  height: 50px; /* 初始大小 */
   padding: 10px;
+  border-radius: 50%;
+  background-color: #7EC0FC; /* 初始背景顏色 */
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; /* 平滑過渡效果 */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2),
+   0 9px 14px rgba(0, 0, 0, 0.25),
+    0 6px 8px rgba(0, 0, 0, 0.3); /* 初始陰影效果 */
 }
+
+.scrollToTopButton:hover {
+  width: 60px; /* 懸停時的大小變更 */
+  height: 60px; /* 懸停時的大小變更 */
+  background-color: #8CC7FC; /* 懸停時的背景顏色 */
+  bottom: 25px; /* 懸停時的位置變更 */
+  right: 15px; /* 懸停時的位置變更 */
+  box-shadow: 0 15px 29px rgba(0, 0, 0, 0.05), 
+  0 12px 24px rgba(0, 0, 0, 0.08), 
+  0 9px 14px rgba(0, 0, 0, 0.12); /* 懸停時的陰影效果 */
+}
+
+.scrollToTopButton:active {
+  /* 按钮在按下时的大小稍微减小，以模拟按压效果 */
+  width: 48px;
+  height: 48px;
+  /* 调整位置以保持按钮中心点不变 */
+  bottom: 21px;
+  right: 21px;
+  /* 使用较深的蓝色填充来表示按下状态 */
+  background-color: #6AB0EC;
+  /* 调整 box-shadow 以模拟 SVG 中的阴影效果 */
+  box-shadow: 
+    0 5px 6px rgba(0, 0, 0, 0.09), /* 第一层阴影 */
+    0 3px 3px rgba(0, 0, 0, 0.12), /* 第二层阴影 */
+    0 1px 1px rgba(0, 0, 0, 0.16); /* 第三层阴影 */
+  /* 转换效果让按下的反馈看起来更平滑 */
+  transition: all 0.1s ease;
+}
+
 .menuButton {
   display: none; /* 預設不顯示 */
   /* 添加必要的樣式 */

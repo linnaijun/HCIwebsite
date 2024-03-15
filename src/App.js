@@ -10,7 +10,7 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 
 function App() {
-  
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -21,7 +21,7 @@ function App() {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop-60,
+        top: section.offsetTop - 60,
         behavior: 'smooth'
       });
     }
@@ -41,7 +41,7 @@ function App() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   useEffect(() => {
     document.title = "研究所";
   }, []); // 空依賴數組表示這個效果只會在組件掛載時運行一次
@@ -67,10 +67,10 @@ function App() {
 
 
 
-  const handleScroll =  useCallback(() => {
+  const handleScroll = useCallback(() => {
     const halfWindowHeight = window.innerHeight / 2;
     const scrollPosition = window.pageYOffset + halfWindowHeight;
-    
+
     // 获取每个部分顶部到页面顶部的距离
     const positions = {
       title: document.getElementById('title') ? document.getElementById('title').offsetTop : 0,
@@ -82,7 +82,7 @@ function App() {
       camp: document.getElementById('camp') ? document.getElementById('camp').offsetTop : 0,
       contact: document.getElementById('contact') ? document.getElementById('contact').offsetTop : 0,
     };
-  
+
     // 使用if-else if结构来根据滚动位置设置newText和sidebarBgColor
     if (scrollPosition >= positions.title && scrollPosition < positions.faculty) {
       setNewText('標題');
@@ -117,10 +117,10 @@ function App() {
       setSidebarBgColor(COLORS.evenSectionBackground);
       setIsSidebarVisible(false); // 隐藏侧边栏
     }
-  },  [setNewText, setSidebarBgColor,COLORS]); 
-  
-  
-  
+  }, [setNewText, setSidebarBgColor, COLORS]);
+
+
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -142,24 +142,28 @@ function App() {
           <button className="linkButton" onClick={() => scrollToSection('contact')}>聯絡資訊</button>
         </div>
       </div>
-  
-      <div className="content" style={{paddingTop: '60px'}}>
-      <div className={`fixedBox ${isSidebarVisible ? '' : 'hideSidebar'}`} style={{ backgroundColor: sidebarBgColor }}>
-  <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
+
+      <div className="content" style={{ paddingTop: '60px' }}>
+        <div className={`fixedBox ${isSidebarVisible ? '' : 'hideSidebar'}`} style={{ backgroundColor: sidebarBgColor }}>
+          <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
         </div>
-        <Title height="1000px" id="title"/>
-        <Faculty height="800px" id="faculty"/>
-        <Thesis height="800px" id="thesis"/>
-        <Topics height="800px" id="topics"/>
-        <Honors height="800px" id="honors"/>
-        <Album height="800px" id="album"/>
-        <Camp height="800px" id="camp"/>
-        <Contact height="800px" id="contact"/>
-        <button onClick={scrollToTop} className="scrollToTopButton"></button>
+        <Title height="1000px" id="title" />
+        <Faculty height="800px" id="faculty" />
+        <Thesis height="800px" id="thesis" />
+        <Topics height="800px" id="topics" />
+        <Honors height="800px" id="honors" />
+        <Album height="800px" id="album" />
+        <Camp height="800px" id="camp" />
+        <Contact height="800px" id="contact" />
+        <button onClick={scrollToTop} className="scrollToTopButton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M30 25L20 15L10 25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
       </div>
     </div>
   );
-  
+
 }
 
 export default App;
