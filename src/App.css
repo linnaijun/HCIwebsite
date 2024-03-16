@@ -13,6 +13,9 @@
   }
 }
 
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,62 +26,129 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .header {
+  display: flex;
+  height: 56px;
+  /* 设置高度为56px */
+  margin: 0 auto;
+  padding: 4px 20px 4px 40px;
+  /* 上右下左的内边距 */
+  justify-content: space-between;
+  /* 两端对齐 */
+  align-items: center;
+  /* 垂直居中 */
+  background-color: #FFF;
+  /* 背景色为白色 */
+  box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+  /* 阴影效果 */
   position: fixed;
+  /* 固定位置 */
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #333; /* 您可以根据需要更改颜色 */
-  color: white;
+  right: 0;
+  /* 使header水平居中 */
   z-index: 1000;
-  display: flex;
-  justify-content: space-around; /* 确保按钮平均分布 */
-  padding: 10px 0;
+  /* 确保header在最上层 */
+}
+
+.logo {
+  height: 50px;
+  /* 或任何合适的高度 */
+  width: auto;
+  /* 保持图像的宽高比 */
+  margin-right: auto;
+  /* 确保所有其他元素（比如菜单按钮和链接）被推到右侧 */
 }
 
 .linkButton {
-  background-color: #444; /* 按钮背景颜色 */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  display: flex;
+  padding: 10px 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  /* 按钮内部元素的间距 */
+  border-radius: 16px;
+  /* 边框圆角 */
+  background-color: transparent;
+  /* 按钮背景透明 */
+  color: #333;
+  /* 按钮文字颜色 */
   font-size: 16px;
-  margin: 4px 2px;
+  /* 文字大小 */
+
+  text-decoration: none;
+  /* 去除下划线 */
   cursor: pointer;
-  border-radius: 5px; /* 可选的圆角 */
+  /* 鼠标悬停时显示手形指针 */
+  border: none;
+  /* 无边框样式 */
 }
+
+/* 您可能还需要为按钮添加:hover等伪类来提升用户交互体验 */
+.linkButton:hover {
+  background-color: #f0f0f0;
+  /* 鼠标悬停时的背景色，可以根据实际设计调整 */
+}
+
 
 .App-link {
   color: #61dafb;
 }
+
 .fixedBox {
+  --translate-x: 0px;
+  /* 定义变量 */
   position: fixed;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
-  width: 59px; /* 您可能需要根據Figma設計調整寬度 */
-  height: 290px; /* 您可能需要根據Figma設計調整高度 */
-  background-color: #7EC0FC; /* 設計師提供的背景顏色 */
-  display: inline-flex; /* 從flex修改為inline-flex，但對於固定定位的元素影響不大 */
-  flex-direction: column; /* 沿垂直方向排列子元素 */
-  justify-content: center; /* 垂直居中子元素 */
-  align-items: center; /* 水平居中子元素 */
-  padding: 48px 18px; /* 根據Figma設計調整內距 */
-  border-radius: 0px 20px 20px 0px; /* 添加圓角設計 */
-  color: var(--grey-100-ffffff, #FFF); /* 設定文字顏色 */
-  transition: background-color 0.5s ease;
+  transform: translateX(var(--translate-x)) translateY(-50%);
+  width: 23px;
+  height: 194px;
+  background-color: #7EC0FC;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 18px;
+  border-radius: 0px 20px 20px 0px;
+  color: var(--grey-100-ffffff, #FFF);
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
+.hideSidebar {
+  --translate-x: -100%;
+  /* 更新变量 */
+}
+
+.links {
+  display: flex;
+  flex-grow: 1;
+  /* 让.links元素填充可用空间 */
+  justify-content: flex-end;
+  /* 让内容靠右对齐 */
+  align-items: center;
+  /* 垂直居中对齐（如果需要的话） */
+  gap: 10px;
+  /* 按钮之间的间隙 */
+}
+
+
 .verticalText {
-  writing-mode: vertical-rl; /* 保持文字直立顯示 */
-  transform: rotate(0deg); /* 確保文字方向正確 */
-  font-family: "GenSenRounded TW"; /* 設定特定字體 */
-  font-size: 23px; /* 根據Figma設計調整字體大小 */
-  font-style: normal; /* 字體樣式 */
-  font-weight: 700; /* 字體加粗 */
-  line-height: 120%; /* 設定行高 */
+  writing-mode: vertical-rl;
+  /* 保持文字直立顯示 */
+  transform: rotate(0deg);
+  /* 確保文字方向正確 */
+  font-family: "GenSenRounded TW";
+  /* 設定特定字體 */
+  font-size: 23px;
+  /* 根據Figma設計調整字體大小 */
+  font-style: normal;
+  /* 字體樣式 */
+  font-weight: 700;
+  /* 字體加粗 */
+  line-height: 120%;
+  /* 設定行高 */
 }
 
 .scrollToTopButton {
@@ -86,34 +156,131 @@
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  width: 150px;
-  height: 150px;
+  width: 64px;
+  /* 初始大小 */
+  height: 64px;
+  /* 初始大小 */
   padding: 10px;
-}
-.menuButton {
-  display: none; /* 預設不顯示 */
-  /* 添加必要的樣式 */
+  border-radius: 50%;
+  background-color: #7EC0FC;
+  /* 初始背景顏色 */
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  /* 平滑過渡效果 */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03),
+    0 9px 28px rgba(0, 0, 0, 0.05),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+  /* 初始陰影效果 */
 }
 
-.links {
-  display: flex; /* 或其他布局 */
+.scrollToTopButton:hover {
+  width: 72px;
+  /* 懸停時的大小變更 */
+  height: 72px;
+  /* 懸停時的大小變更 */
+  background-color: #8CC7FC;
+  /* 懸停時的背景顏色 */
+  bottom: 25px;
+  /* 懸停時的位置變更 */
+  right: 15px;
+  /* 懸停時的位置變更 */
+  box-shadow: 0 15px 29px rgba(0, 0, 0, 0.05),
+    0 12px 24px rgba(0, 0, 0, 0.08),
+    0 9px 14px rgba(0, 0, 0, 0.12);
+  /* 懸停時的陰影效果 */
 }
+
+.scrollToTopButton:active {
+  /* 按钮在按下时的大小稍微减小，以模拟按压效果 */
+  width: 60px;
+  height: 60px;
+  /* 调整位置以保持按钮中心点不变 */
+  bottom: 21px;
+  right: 21px;
+  /* 使用较深的蓝色填充来表示按下状态 */
+  background-color: #6AB0EC;
+  /* 调整 box-shadow 以模拟 SVG 中的阴影效果 */
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.09),
+    /* 第一层阴影 */
+    0 3px 6px rgba(0, 0, 0, 0.12),
+    /* 第二层阴影 */
+    0 1px 2px rgba(0, 0, 0, 0.16);
+  /* 第三层阴影 */
+  /* 转换效果让按下的反馈看起来更平滑 */
+  transition: all 0.1s ease;
+}
+
+.menuButton {
+  display: none;
+  /* 默认情况下隐藏 */
+  width: 32px;
+  /* 按钮宽度 */
+  height: 32px;
+  /* 按钮高度 */
+  flex-shrink: 0;
+  /* 防止按钮在flex布局中缩小 */
+  background-color: transparent;
+  /* 背景透明 */
+  border: none;
+  /* 无边框 */
+  cursor: pointer;
+  /* 鼠标悬停时显示手形指针 */
+}
+
+
 /* 向左淡出动画 */
 @keyframes fadeOutToLeft {
   from {
     opacity: 1;
     transform: translateX(0);
   }
+
   to {
     opacity: 0;
-    transform: translateX(-50px); /* 增加移动距离以强化效果 */
+    transform: translateX(-50px);
+    /* 增加移动距离以强化效果 */
   }
 }
+
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    padding: 5px 0;
+    padding: 4px 16px;
   }
+  
+  .links {
+    display: none;
+    /* 默认隐藏 */
+    flex-direction: column;
+    /* 让按钮垂直排列 */
+    background-color: #fff;
+    /* 白色背景 */
+    align-items: flex-start;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* 添加一些阴影以提升层次感 */
+    position: absolute;
+    /* 绝对定位，使其不影响其他元素的布局 */
+    top: 100%;
+    /* 放在触发元素的正下方 */
+    left: 0;
+    width: 100%;
+    /* 可以根据实际需要调整宽度 */
+    z-index: 100;
+    /* 确保它在其他内容之上 */
+  }
+
+  .links.show {
+    display: flex;
+    padding: 16px 0px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    /* 点击菜单按钮时显示 */
+  }
+
 
   .linkButton {
     padding: 5px 10px;
@@ -122,10 +289,11 @@
   }
 
   .fixedBox {
-    width: 30 px;
-    height: 166px;
+    width: 14 px;
+    height: 118px;
     font-size: 14px;
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0px 14px 14px 0px;
+    padding: 24px 8px;
     background: #7EC0FC;
   }
 
@@ -134,39 +302,114 @@
   }
 
   .scrollToTopButton {
-    width: 100px;
-    height: 100px;
-  }
-  .menuButton {
-    display: block; /* 在小屏幕上顯示菜單按鈕 */
+    width: 56px;
+    /* 在小裝置上減小按鈕大小 */
+    height: 56px;
+    /* 在小裝置上減小按鈕大小 */
+    bottom: 24px;
+    /* 在小裝置上調整位置 */
+    right: 24px;
+    /* 在小裝置上調整位置 */
+    padding: 8px;
+    /* 在小裝置上調整内距 */
+    /* 可以考慮調整字型大小、box-shadow 等，依據需要 */
   }
 
-  .links {
-    display: none; /* 預設隱藏連結 */
-    flex-direction: column; /* 使連結垂直排列 */
+  .scrollToTopButton:hover {
+    width: 60px;
+    /* 在小裝置上的懸停大小 */
+    height: 60px;
+    /* 在小裝置上的懸停大小 */
+    bottom: 26px;
+    /* 在小裝置上的懸停位置 */
+    right: 24px;
+    /* 在小裝置上的懸停位置 */
+    /* 根據需要調整其他樣式 */
+  }
+
+  .scrollToTopButton:active {
+    width: 48px;
+    /* 在小裝置上的懸停大小 */
+    height: 48px;
+    /* 在小裝置上的懸停大小 */
+    bottom: 26px;
+    /* 在小裝置上的懸停位置 */
+    right: 26px;
+    /* 根據需要調整按下狀態的樣式 */
+  }
+
+  .menuButton {
+    display: block;
+    /* 在小屏幕上显示 */
+    margin-left: auto;
+    /* 靠右对齐 */
   }
 
   .links.show {
-    display: flex; /* 當菜單打開時顯示連結 */
+    display: flex;
+    /* 确保在RWD模式下展开时是flex布局 */
+  }
+
+  .links {
+    display: none;
+    /* 預設隱藏連結 */
+    flex-direction: column;
+    /* 使連結垂直排列 */
+  }
+
+  .links.show {
+    display: flex;
+    /* 當菜單打開時顯示連結 */
   }
 }
 
 /* 中型裝置（平板） */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .header {
-    padding: 10px 0;
-  }
+
 
   .linkButton {
     padding: 10px 15px;
     font-size: 15px;
   }
 
- 
+
 
   .scrollToTopButton {
-    width: 120px;
-    height: 120px;
+    width: 64px;
+    /* 在平板上調整按鈕大小 */
+    height: 64px;
+    /* 在平板上調整按鈕大小 */
+    bottom: 15px;
+    /* 在平板上調整位置 */
+    right: 15px;
+    /* 在平板上調整位置 */
+    padding: 9px;
+    /* 在平板上調整内距 */
+
+  }
+
+  .scrollToTopButton:hover {
+    width: 72px;
+    /* 在平板上的懸停大小 */
+    height: 72px;
+    /* 在平板上的懸停大小 */
+    bottom: 20px;
+    /* 在平板上的懸停位置 */
+    right: 10px;
+    /* 在平板上的懸停位置 */
+    /* 根據需要調整其他樣式 */
+  }
+
+  .scrollToTopButton:active {
+    width: 60px;
+    /* 在平板上的懸停大小 */
+    height: 60px;
+    /* 在平板上的懸停大小 */
+    bottom: 20px;
+    /* 在平板上的懸停位置 */
+    right: 20px;
+    /* 在平板上的懸停位置 */
+    /* 根據需要調整其他樣式 */
   }
 }
 
@@ -175,8 +418,10 @@
 @keyframes fadeInFromRight {
   from {
     opacity: 0;
-    transform: translateX(-50px); /* 增加移动距离以强化效果 */
+    transform: translateX(-50px);
+    /* 增加移动距离以强化效果 */
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -195,6 +440,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
