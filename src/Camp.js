@@ -4,7 +4,7 @@ import CampData from './Camp.json';
 
 const Camp = ({ height }) => {
   const [photos, setPhotos] = useState([]);
-  const [expandedPhotoId, setExpandedPhotoId] = useState(null);
+  const [expandedPhotoId, setExpandedPhotoId] = useState(4);
 
   useEffect(() => {
     setPhotos([...CampData]);
