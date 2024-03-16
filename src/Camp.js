@@ -19,7 +19,7 @@ const Camp = ({ height }) => {
   };
 
   return (
-    <div id="camp" style={{ height, backgroundColor: 'peachpuff', padding: '20px', overflowX: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div id="camp" style={{ height, backgroundColor: 'lightblue', padding: '20px', overflowX: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <div className="photos">
         {photos.map((photo) => (
           <div className={`photo-container ${expandedPhotoId === photo.id ? 'expanded' : ''}`} key={photo.id} onClick={() => handleImageClick(photo.id)}>
