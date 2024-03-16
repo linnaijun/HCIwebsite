@@ -1,7 +1,7 @@
 .photos {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: hidden; /* 保持滾動功能 */
+  overflow-x: auto; /* 保持滾動功能 */
   -ms-overflow-style: none;  /* IE和Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -11,6 +11,7 @@
 }
 
 .photo-container {
+  min-width: 50px;
   width: 50px; /* 裁剪后的宽度 */
   height: auto;
   overflow: hidden;
@@ -27,7 +28,7 @@
 }
 
 .photo-container.expanded {
-  width: 200px; /* 点击后容器宽度增加 */
+ width: 200px; /* 点击后容器宽度增加 */
 }
 
 .photo-container img.expanded {
