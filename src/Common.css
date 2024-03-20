@@ -1,1 +1,34 @@
 /* 通用樣式 */
+
+.container {
+    max-width: 100%;
+    padding: 0 36px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 48px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1288px;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    /*小版隱藏*/
+    .hidden_sm {
+        display: none;
+    }
+}
