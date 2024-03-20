@@ -18,19 +18,19 @@ function Topics() {
   // icon
   const iconNum = (id) => {
     let icon = ''
-    if (id == 1) {
+    if (id === 1) {
       icon = icon1
     }
-    else if (id == 2) {
+    else if (id === 2) {
       icon = icon2
     }
-    else if (id == 3) {
+    else if (id === 3) {
       icon = icon3
     }
-    else if (id == 4) {
+    else if (id === 4) {
       icon = icon4
     }
-    else if (id == 5) {
+    else if (id === 5) {
       icon = icon5
     }
     else {
