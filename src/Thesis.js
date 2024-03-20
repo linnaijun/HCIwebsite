@@ -1,5 +1,5 @@
 import React from 'react';
-import TopicsData from './Topics.json';
+//import TopicsData from './Topics.json';
 
 function Thesis({ height }) {
   return (
