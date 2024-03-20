@@ -9,6 +9,7 @@ import Contact from './Contact';
 import logo from './img/logo.svg'; // 导入图片
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
+import './Common.css'; // 通用樣式
 
 function App() {
 
