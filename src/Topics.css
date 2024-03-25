@@ -7,7 +7,7 @@
 .topics_cards {
     display: flex;
     justify-content: center;
-    margin: 0 0px;
+    margin: 0 -12px;
 }
 
 .topics_outer {
