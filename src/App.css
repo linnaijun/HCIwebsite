@@ -101,7 +101,7 @@
   /* 定义变量 */
   position: fixed;
   left: 0;
-  top: 50%;
+  top: 60%;
   transform: translateX(var(--translate-x)) translateY(-50%);
   width: 20px;
   height: 172px;
@@ -352,11 +352,11 @@
   }
 
   .fixedBox {
-    width: 14 px;
-    height: 118px;
+    width: 12px;
+    height: 120px;
     font-size: 14px;
     border-radius: 0px 14px 14px 0px;
-    padding: 24px 8px;
+    padding: 12px 12px;
     background: #7EC0FC;
   }
 

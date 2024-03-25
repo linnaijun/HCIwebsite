@@ -67,8 +67,6 @@ function App() {
   }, [newTextAnimation, newText]);
 
 
-
-
   const handleScroll = useCallback(() => {
     const halfWindowHeight = window.innerHeight / 2;
     const scrollPosition = window.pageYOffset + halfWindowHeight;
@@ -85,6 +83,7 @@ function App() {
       contact: document.getElementById('contact') ? document.getElementById('contact').offsetTop : 0,
     };
 
+    
     // 使用if-else if结构来根据滚动位置设置newText和sidebarBgColor
     if (scrollPosition >= positions.title && scrollPosition < positions.faculty) {
       setNewText('標題');
@@ -158,7 +157,7 @@ function App() {
         <div className={`fixedBox ${isSidebarVisible ? '' : 'hideSidebar'}`} style={{ backgroundColor: sidebarBgColor }}>
           <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
         </div>
-        <Title height="1000px" id="title" />
+        <Title height="100vh" id="title" /> {/*偷偷改動*/}
         <Faculty height="800px" id="faculty" />
         <Thesis height="800px" id="thesis" />
         <Topics height="800px" id="topics" />

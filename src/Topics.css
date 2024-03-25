@@ -1,13 +1,13 @@
 .topics_box {
     background: url(./img/Topics_bg.png)no-repeat center center;
     background-size: cover;
-    padding: 120px 0;
+    padding: 120px 0px 120px 36px;
 }
 
 .topics_cards {
     display: flex;
     justify-content: center;
-    margin: 0 -12px;
+    margin: 0 0px;
 }
 
 .topics_outer {
@@ -72,11 +72,12 @@ p {
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
-    line-height: 225%;
+    line-height: 215%;
     /* 29.25px */
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1280px) {
+    /* 讓mac對焦pc瀏覽體驗 */
     .topics_box {
         padding: 60px 0;
 
@@ -128,6 +129,10 @@ p {
 }
 
 @media (max-width: 768px) {
+    .topics_box {
+        padding: 60px 0px;
+
+    }
     .topics_cards {
         max-width: 400px;
     }
