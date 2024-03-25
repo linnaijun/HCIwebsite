@@ -75,9 +75,8 @@ p {
     line-height: 215%;
     /* 29.25px */
 }
-
+    /* 讓mac對焦pc瀏覽體驗，斷點採用1280px */
 @media (max-width: 1280px) {
-    /* 讓mac對焦pc瀏覽體驗 */
     .topics_box {
         padding: 60px 0;
 
@@ -130,7 +129,7 @@ p {
 
 @media (max-width: 768px) {
     .topics_box {
-        padding: 60px 0px;
+        padding: 60px 0px 60px 8px;
 
     }
     .topics_cards {
