@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.a8b90f7e.css",
+    "main.css": "/HCIwebsite/static/css/main.5e614781.css",
     "main.js": "/HCIwebsite/static/js/main.9152d54b.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
+    "static/media/GenSenRounded-H.ttc": "/HCIwebsite/static/media/GenSenRounded-H.5faec928091c8308b68a.ttc",
+    "static/media/GenSenRounded-B.ttc": "/HCIwebsite/static/media/GenSenRounded-B.3a6f48270731b2cdbde8.ttc",
+    "static/media/GenSenRounded-M.ttc": "/HCIwebsite/static/media/GenSenRounded-M.e59525b4eb7c619bfcdf.ttc",
+    "static/media/GenSenRounded-R.ttc": "/HCIwebsite/static/media/GenSenRounded-R.4d8dac3fd27444ed2563.ttc",
+    "static/media/GenSenRounded-L.ttc": "/HCIwebsite/static/media/GenSenRounded-L.fec82a10b6b8b1f773d1.ttc",
+    "static/media/GenSenRounded-EL.ttc": "/HCIwebsite/static/media/GenSenRounded-EL.520d14299583bb1b3fe6.ttc",
     "static/media/Topics_bg.png": "/HCIwebsite/static/media/Topics_bg.85461874214f2be03be5.png",
     "static/media/logo.svg": "/HCIwebsite/static/media/logo.ce7b36d595757445440af2fd09fc2e06.svg",
     "index.html": "/HCIwebsite/index.html",
-    "main.a8b90f7e.css.map": "/HCIwebsite/static/css/main.a8b90f7e.css.map",
+    "main.5e614781.css.map": "/HCIwebsite/static/css/main.5e614781.css.map",
     "main.9152d54b.js.map": "/HCIwebsite/static/js/main.9152d54b.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8b90f7e.css",
+    "static/css/main.5e614781.css",
     "static/js/main.9152d54b.js"
   ]
 }
