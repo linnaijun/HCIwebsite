@@ -50,7 +50,7 @@
     flex-wrap: wrap;
     align-content: flex-start; /* 确保多行内容时也能向上对齐 */
     overflow-y: auto; /* 允许垂直滚动 */
-    height: 300px; /* 或其他固定高度 */
+    height: 500px; /* 或其他固定高度 */
     width: 66%; /* 根据需要调整 */
     padding: 10px;
     background-color: red; /* 可选：设置背景色以增加可读性 */
@@ -76,7 +76,7 @@
 }
 .text-display-area .detail-block {
     text-align: left;
-    height: 25%;
+    height: 50px;
     flex: 1 1 auto; /* 允许方块根据内容自动调整宽度，但不允许它们长到超过它们的内容 */
     min-width: min-content; /* 设置最小宽度为内容的宽度 */
     max-width: calc(50% - 10px); /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
