@@ -5,7 +5,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* 确保占满容器宽度 */
+   
 }
 
 .images-row {
@@ -46,25 +46,36 @@
 }
 
 .text-display-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start; /* 确保多行内容时也能向上对齐 */
+    overflow-y: auto; /* 允许垂直滚动 */
     height: 300px; /* 或其他固定高度 */
-    width: 66%;
-    overflow-y: auto; /* 当内容超过高度时允许垂直滚动 */
-    padding: 10px; /* 可选：增加一些内边距使得阅读更舒适 */
+    width: 66%; /* 根据需要调整 */
+    padding: 10px;
    
-    margin-top: 20px; /* 和图片按钮列之间的间距 */
-    display: flex; /* 启用 Flexbox 布局 */
-    flex-wrap: wrap; /* 允许内容自动换行 */
-    justify-content: flex-start; /* 项目在主轴（此处为水平方向）的对齐方式 */
-   
+    margin-top: 20px;
+    justify-content: flex-start; /* 确保子元素从容器的开始处排列 */
 }
 
+.text-display-area::-webkit-scrollbar {
+    display: none; /* Chrome, Safari 和 Opera */
+}
 .text-display-area .detail-block {
+    text-align: left;
     height: 25%;
     flex: 1 1 auto; /* 允许方块根据内容自动调整宽度，但不允许它们长到超过它们的内容 */
+    min-width: min-content; /* 设置最小宽度为内容的宽度 */
     max-width: calc(50% - 10px); /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
     margin: 5px; /* 给方块之间添加一些间隙 */
     background-color: #f0f0f0; /* 浅灰色背景 */
-    margin-bottom: 15px; /* 与下一个色块之间的间距 */
-    padding: 10px; /* 文本与色块边缘之间的间距 */
+     padding: 10px; /* 文本与色块边缘之间的间距 */
     border-radius: 5px; /* 轻微的圆角边缘 */
+      /* 防止文本换行 */
+      white-space: nowrap;
+      /* 当文本超出方块宽度时，隐藏超出部分 */
+      overflow: hidden;
+      /* 添加省略号表示文本被截断 */
+      text-overflow: ellipsis;
+      
 }

@@ -80,13 +80,20 @@ function Thesis({ height }) {
       </div>
       <div ref={detailsContainerRef} className="text-display-area">
     {selectedThesisDetails.map((detail, index) => (
-        <div key={index} className="detail-block"> {/* 使用新的类名 */}
-            <p>作者: {detail.author}</p>
-            <p>标题: {detail.title}</p>
-             <a href={detail.url} target="_blank" rel="noopener noreferrer">论文链接</a>
+        <div
+            key={index}
+            className="detail-block"
+            onClick={() => window.open(detail.url, '_blank')}
+            role="button"
+            tabIndex="0"
+            style={{ cursor: 'pointer' }} // 增加指针样式表明可点击
+        >
+            <p style={{ textAlign: 'left', margin: 0 }}>作者: {detail.author}</p>
+            <p style={{ textAlign: 'left', margin: 0 }}>标题: {detail.title}</p>
         </div>
     ))}
 </div>
+
     </div>
   );
 }
