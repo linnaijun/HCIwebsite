@@ -5,59 +5,50 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* 確保佔滿容器寬度 */
-  }
-  
-  .image-container {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0; /* 粘性定位生效的起点 */
-    z-index: 1000; /* 确保悬浮层位于其他内容上方 */
+    width: 100%; /* 确保占满容器宽度 */
+}
+
+.images-row {
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 中心对齐子项 */
+    align-items: center; /* 纵向居中 */
+    flex-direction: row; /* 子元素沿水平方向排列 */
+    width: 100%; /* 根据需要调整 */
+}
+
+.placeholder {
+    width: 100px;
+    height: 100px; /* 确保方形的尺寸 */
+    background-color: #000; /* 黑色 */
+    margin: 0 20px; /* 添加一些外边距以便于观察 */
+}
+
+.image-container {
     overflow-x: auto; /* 允许水平滚动 */
     overflow-y: hidden; /* 隐藏垂直滚动 */
     white-space: nowrap; /* 防止内容换行，确保水平布局 */
-    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* 渐变遮罩，两端透明，中间不透明 */
     width: 1000px; /* 容器宽度 */
     height: 200px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     scrollbar-width: none; /* 隐藏Firefox的滚动条 */
     -ms-overflow-style: none; /* 隐藏IE 10+的滚动条 */
     background-color: white; /* 可选：设置背景色以增加可读性 */
-  }
-  
-  /* 隐藏Chrome, Safari, Opera的滚动条 */
-  .image-container::-webkit-scrollbar {
+}
+
+/* 隐藏Chrome, Safari, Opera的滚动条 */
+.image-container::-webkit-scrollbar {
     display: none;
-  }
-  
-  
-  
-  .image-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-  
-  .image {
+}
+
+.image {
     width: 200px;
     height: 200px;
     display: inline-block;
-  }
-  .details-container {
-    overflow-y: auto; /* 允许垂直滚动 */
-    max-height: 400px; /* 设置最大高度，确保超出部分可以滚动 */
-    margin-top: 20px; /* 和图片按钮列保持一定距离 */
-  }
-  
-  .thesis-detail {
-    border: 1px solid #ddd; /* 给详情框加边框 */
-    padding: 10px; /* 内边距 */
-    margin-bottom: 10px; /* 详情框之间的间隔 */
-    background-color: #f9f9f9; /* 背景色 */
-  }
-  
-  .text-display-area {
+}
+
+.text-display-area {
     height: 300px; /* 或其他固定高度 */
     overflow-y: auto; /* 当内容超过高度时允许垂直滚动 */
     padding: 10px; /* 可选：增加一些内边距使得阅读更舒适 */
     border: 1px solid #ccc; /* 可选：增加边框使得区块更明显 */
     margin-top: 20px; /* 和图片按钮列之间的间距 */
-  }
-  
+}
