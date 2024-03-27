@@ -89,7 +89,7 @@ function Thesis({ height }) {
             style={{ cursor: 'pointer' }} // 增加指针样式表明可点击
         >
             <p style={{ textAlign: 'left', margin: 0 }}>作者: {detail.author}</p>
-            <p style={{ textAlign: 'left', margin: 0 }}>标题: {detail.title}</p>
+            <p style={{ textAlign: 'left', margin: 0 }}>標题: {detail.title}</p>
         </div>
     ))}
 </div>

@@ -53,13 +53,26 @@
     height: 300px; /* 或其他固定高度 */
     width: 66%; /* 根据需要调整 */
     padding: 10px;
-   
+    background-color: red; /* 可选：设置背景色以增加可读性 */
     margin-top: 20px;
     justify-content: flex-start; /* 确保子元素从容器的开始处排列 */
 }
 
 .text-display-area::-webkit-scrollbar {
-    display: none; /* Chrome, Safari 和 Opera */
+    width: 8px; /* 滚动条宽度 */
+    height: 8px; /* 滚动条高度（对水平滚动条有效） */
+}
+
+/* 滚动条滑块 */
+.text-display-area::-webkit-scrollbar-thumb {
+    background: #888; /* 滑块颜色 */
+    border-radius: 4px; /* 滑块圆角 */
+}
+
+/* 滚动条轨道 */
+.text-display-area::-webkit-scrollbar-track {
+    background: #f0f0f0; /* 轨道颜色 */
+    border-radius: 4px; /* 轨道圆角 */
 }
 .text-display-area .detail-block {
     text-align: left;
