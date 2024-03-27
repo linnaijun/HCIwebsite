@@ -79,16 +79,14 @@ function Thesis({ height }) {
 />
       </div>
       <div ref={detailsContainerRef} className="text-display-area">
-        {selectedThesisDetails.map((detail, index) => (
-          <div key={index}>
+    {selectedThesisDetails.map((detail, index) => (
+        <div key={index} className="detail-block"> {/* 使用新的类名 */}
             <p>作者: {detail.author}</p>
             <p>标题: {detail.title}</p>
-            <p>年份: {detail.year}</p>
-            <p>指导教授: {detail.professor1} {detail.professor2 ? `, ${detail.professor2}` : ''}</p>
-            <a href={detail.url} target="_blank" rel="noopener noreferrer">论文链接</a>
-          </div>
-        ))}
-      </div>
+             <a href={detail.url} target="_blank" rel="noopener noreferrer">论文链接</a>
+        </div>
+    ))}
+</div>
     </div>
   );
 }
