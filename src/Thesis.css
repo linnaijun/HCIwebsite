@@ -79,7 +79,7 @@
     height: 50px;
     flex: 1 1 auto; /* 允许方块根据内容自动调整宽度，但不允许它们长到超过它们的内容 */
     min-width: min-content; /* 设置最小宽度为内容的宽度 */
-    max-width: calc(50% - 10px); /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
+    max-width: min-content; /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
     margin: 5px; /* 给方块之间添加一些间隙 */
     background-color: #f0f0f0; /* 浅灰色背景 */
      padding: 10px; /* 文本与色块边缘之间的间距 */
