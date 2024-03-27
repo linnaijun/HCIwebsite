@@ -59,6 +59,7 @@
 }
 
 .text-display-area .detail-block {
+    height: 25%;
     flex: 1 1 auto; /* 允许方块根据内容自动调整宽度，但不允许它们长到超过它们的内容 */
     max-width: calc(50% - 10px); /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
     margin: 5px; /* 给方块之间添加一些间隙 */
