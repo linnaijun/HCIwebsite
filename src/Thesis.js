@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Thesis.css';
 import thesisData from './Thesis.json';
-
+import PlanetSvg from './img/Planet.svg'; // 引入Planet.svg
+import ArrowL from './img/ArrowL.svg'; // 引入左箭头SVG
+import ArrowR from './img/ArrowR.svg'; // 引入右箭头SVG
 function Thesis({ height }) {
   const [years, setYears] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
@@ -13,14 +15,14 @@ function Thesis({ height }) {
     const uniqueYears = Array.from(new Set(thesisData[0].map(item => item.year)))
       .sort((a, b) => b - a);
     setYears(uniqueYears);
-      // 确保年份列表已经被设置
-  if(uniqueYears.length > 0) {
-    const latestYear = uniqueYears[0]; // 因为已经排序，所以第一个元素是最新的年份
-    setSelectedYear(latestYear); // 设置当前选中的年份
-    // 模拟点击最新年份，这里不直接调用 handleClick 因为它需要 index，我们已经知道是 0
-    const selectedDetails = thesisData[0].filter(item => item.year === latestYear);
-    setSelectedThesisDetails(selectedDetails);
-  }
+    // 确保年份列表已经被设置
+    if (uniqueYears.length > 0) {
+      const latestYear = uniqueYears[0]; // 因为已经排序，所以第一个元素是最新的年份
+      setSelectedYear(latestYear); // 设置当前选中的年份
+      // 模拟点击最新年份，这里不直接调用 handleClick 因为它需要 index，我们已经知道是 0
+      const selectedDetails = thesisData[0].filter(item => item.year === latestYear);
+      setSelectedThesisDetails(selectedDetails);
+    }
   }, []);
 
 
@@ -46,53 +48,57 @@ function Thesis({ height }) {
 
     // 确保索引在有效范围内
     if (newIndex >= 0 && newIndex < years.length) {
-        const newYear = years[newIndex];
-        handleClick(newYear, newIndex);
+      const newYear = years[newIndex];
+      handleClick(newYear, newIndex);
     }
-};
+  };
 
   return (
     <div id="thesis" style={{ height }}>
-       <div className="images-row">
-       <img 
-    src="https://via.placeholder.com/100/000000/000000" 
-    alt="Left Placeholder" 
-    className="placeholder left-placeholder"
-    onClick={() => handlePlaceholderClick('prev')} // 左侧占位图点击
-/>
+      <div className="images-row">
+        <img
+          src={ArrowL}
+          alt="Left Placeholder"
+          className="placeholder left-placeholder"
+          onClick={() => handlePlaceholderClick('prev')} // 左侧占位图点击
+        />
       <div ref={imageContainerRef} className="image-container">
-        {/* 中间部分显示年份的图片，保持不变 */}
-        {years.map((year, index) => (
-          <img key={index}
-            src={`https://via.placeholder.com/200x200/${Math.floor(Math.random() * 16777215).toString(16)}/fff?text=${year}`}
-            alt={`Year ${year}`}
-            className="image"
-            onClick={() => handleClick(year, index)} />
-        ))}
-        {/* 中间部分结束 */}
-      </div>
-      <img 
-    src="https://via.placeholder.com/100/FFFFFF/FFFFFF" 
-    alt="Right Placeholder" 
-    className="placeholder right-placeholder"
-    onClick={() => handlePlaceholderClick('next')} // 右侧占位图点击
-/>
+  {years.map((year, index) => (
+    <div key={index} className="year-container" onClick={() => handleClick(year, index)}>
+      <img
+        src={PlanetSvg}
+        alt={`Year ${year}`}
+        className="image"
+      />
+       <div className="year-text" style={{ color: 'red' }}>{year}</div>
+ 
+    </div>
+  ))}
+</div>
+
+
+        <img
+         src={ArrowR}
+          alt="Right Placeholder"
+          className="placeholder right-placeholder"
+          onClick={() => handlePlaceholderClick('next')} // 右侧占位图点击
+        />
       </div>
       <div ref={detailsContainerRef} className="text-display-area">
-    {selectedThesisDetails.map((detail, index) => (
-        <div
+        {selectedThesisDetails.map((detail, index) => (
+          <div
             key={index}
             className="detail-block"
             onClick={() => window.open(detail.url, '_blank')}
             role="button"
             tabIndex="0"
             style={{ cursor: 'pointer' }} // 增加指针样式表明可点击
-        >
+          >
             <p style={{ textAlign: 'left', margin: 0 }}>作者: {detail.author}</p>
             <p style={{ textAlign: 'left', margin: 0 }}>標题: {detail.title}</p>
-        </div>
-    ))}
-</div>
+          </div>
+        ))}
+      </div>
 
     </div>
   );

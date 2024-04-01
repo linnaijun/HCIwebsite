@@ -19,19 +19,47 @@
 .placeholder {
     width: 100px;
     height: 100px; /* 确保方形的尺寸 */
-    background-color: #000; /* 黑色 */
+    background-color:transparent; /* 黑色 */
     margin: 0 20px; /* 添加一些外边距以便于观察 */
 }
-
+.year-container {
+    position: relative;
+    width: 200px; /* 与图像尺寸相匹配 */
+    height: 200px; /* 与图像尺寸相匹配 */
+    
+    justify-content: center;
+    align-items: center;
+    display: flex; /* 启用Flexbox布局 */
+  flex-direction: row; /* 子元素横向排列 */
+ 
+  gap: 10px; /* 设置子元素之间的间隔 */
+  margin-bottom: 10px; /* 为每个年份容器底部添加一些外边距 */
+  }
+  
+  .planet-image {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .year-text {
+    position: absolute;
+    z-index: 2;
+    color: white; /* 依据背景色调整 */
+    font-size: 24px; /* 根据需要调整 */
+  }
+  
 .image-container {
-    overflow-x: auto; /* 允许水平滚动 */
+    overflow-x: auto;
+    display: flex; /* 允许水平滚动 */
     overflow-y: hidden; /* 隐藏垂直滚动 */
     white-space: nowrap; /* 防止内容换行，确保水平布局 */
     width: 1000px; /* 容器宽度 */
     height: 200px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     scrollbar-width: none; /* 隐藏Firefox的滚动条 */
     -ms-overflow-style: none; /* 隐藏IE 10+的滚动条 */
-    background-color: white; /* 可选：设置背景色以增加可读性 */
+    background-color:transparent; /* 可选：设置背景色以增加可读性 */
+    flex-direction: row; /* 子元素横向排列 */
 }
 
 /* 隐藏Chrome, Safari, Opera的滚动条 */
