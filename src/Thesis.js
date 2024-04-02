@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Thesis.css';
 import thesisData from './Thesis.json';
-import PlanetSvg from './img/Planet.svg'; // 引入Planet.svg
+import PlanetW from './img/PlanetW.svg'; // 默认的星球图标
+import PlanetB from './img/PlanetB.svg'; // 点击后的星球图标
+
 import ArrowL from './img/ArrowL.svg'; // 引入左箭头SVG
 import ArrowR from './img/ArrowR.svg'; // 引入右箭头SVG
 function Thesis({ height }) {
@@ -27,19 +29,33 @@ function Thesis({ height }) {
 
 
   const handleClick = (year, index) => {
-    // 根据索引滚动
-    const scrollX = (index - 2) * 200;
+    // 动态获取imageContainer的实际宽度
+    const containerWidth = imageContainerRef.current.offsetWidth;
+  
+    // 假设所有按钮都有相同的宽度，这里通过获取第一个按钮的宽度作为所有按钮的宽度
+    // 如果按钮宽度不一致，您可能需要根据每个按钮动态计算
+    const buttonWidth = imageContainerRef.current.children[0].offsetWidth;
+  
+    // 计算应该滚动的距离，以使被点击的按钮尽可能地居中
+    // 这里我们需要计算所有到达被点击按钮之前的按钮的总宽度，然后调整滚动距离
+    let totalWidthBeforeClickedButton = 0;
+    for (let i = 0; i < index; i++) {
+      totalWidthBeforeClickedButton += imageContainerRef.current.children[i].offsetWidth;
+    }
+  
+    // 使被点击的按钮居中，需要考虑到容器宽度的一半减去按钮宽度的一半
+    const scrollX = totalWidthBeforeClickedButton - (containerWidth / 2) + (buttonWidth / 2);
+  
     imageContainerRef.current.scroll({
       left: scrollX,
       behavior: 'smooth',
     });
     setSelectedYear(year);
-    // 根据年份更新详细信息
     const selectedDetails = thesisData[0].filter(item => item.year === year);
     setSelectedThesisDetails(selectedDetails);
-
-    // 如果需要，也可以在这里添加滚动到详细信息容器的逻辑
   };
+  
+  
   const handlePlaceholderClick = (direction) => {
     if (!selectedYear) return; // 如果还没有选中任何年份，不做任何操作
 
@@ -64,14 +80,22 @@ function Thesis({ height }) {
         />
       <div ref={imageContainerRef} className="image-container">
   {years.map((year, index) => (
-    <div key={index} className="year-container" onClick={() => handleClick(year, index)}>
+    <div 
+      key={index} 
+      className={`year-container ${selectedYear === year ? 'selected' : ''}`}
+      onClick={() => handleClick(year, index)}
+    >
       <img
-        src={PlanetSvg}
+        src={selectedYear === year ? PlanetB : PlanetW}
         alt={`Year ${year}`}
         className="image"
       />
-       <div className="year-text" style={{ color: 'red' }}>{year}</div>
- 
+      <div 
+        className="year-text" 
+        style={{ color: selectedYear === year ? '#FFFFFF' : "#7EC0FC" }}
+      >
+        {year}
+      </div>
     </div>
   ))}
 </div>

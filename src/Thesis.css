@@ -17,15 +17,15 @@
 }
 
 .placeholder {
-    width: 100px;
-    height: 100px; /* 确保方形的尺寸 */
+    width: 120px;
+    height: 120px; /* 确保方形的尺寸 */
     background-color:transparent; /* 黑色 */
     margin: 0 20px; /* 添加一些外边距以便于观察 */
 }
 .year-container {
     position: relative;
-    width: 200px; /* 与图像尺寸相匹配 */
-    height: 200px; /* 与图像尺寸相匹配 */
+    width: 120px; /* 与图像尺寸相匹配 */
+    height: 120px; /* 与图像尺寸相匹配 */
     
     justify-content: center;
     align-items: center;
@@ -45,8 +45,16 @@
   .year-text {
     position: absolute;
     z-index: 2;
-    color: white; /* 依据背景色调整 */
-    font-size: 24px; /* 根据需要调整 */
+    color: #7EC0FC;
+    text-align: center;
+/* 特規字體/論文年份使用 */
+font-family: "GenSenRounded TW";
+font-size: 18px;
+font-style: normal;
+font-weight: 900;
+line-height: 120%; /* 21.6px */
+   
+   
   }
   
 .image-container {
@@ -54,8 +62,8 @@
     display: flex; /* 允许水平滚动 */
     overflow-y: hidden; /* 隐藏垂直滚动 */
     white-space: nowrap; /* 防止内容换行，确保水平布局 */
-    width: 1000px; /* 容器宽度 */
-    height: 200px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
+    width: 1200px; /* 容器宽度 */
+    height: 120px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     scrollbar-width: none; /* 隐藏Firefox的滚动条 */
     -ms-overflow-style: none; /* 隐藏IE 10+的滚动条 */
     background-color:transparent; /* 可选：设置背景色以增加可读性 */
@@ -68,8 +76,8 @@
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     display: inline-block;
 }
 
@@ -119,4 +127,43 @@
       /* 添加省略号表示文本被截断 */
       text-overflow: ellipsis;
       
+}
+@media (max-width: 768px) {
+    .image-container {
+        height: 70px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
+    }
+    .year-container {
+      
+        width: 87px; /* 与图像尺寸相匹配 */
+        height: 62%; /* 与图像尺寸相匹配 */
+        
+
+      }
+      .image {
+        width: 87px;
+        height: 62px;
+        display: inline-block;
+    }
+    .placeholder {
+        width: 87px;
+        height: 62px;
+        background-color:transparent; /* 黑色 */
+        margin: 0 20px; /* 添加一些外边距以便于观察 */
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+    .image-container {
+        width: 600px;
+        
+    }
+
+}
+
+@media (min-width: 961px) and (max-width: 1280px) {
+    .image-container {
+        width: 720px;
+      
+    }
 }
