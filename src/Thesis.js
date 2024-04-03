@@ -18,10 +18,6 @@ function Thesis({ height }) {
   const [selectedThesisDetails, setSelectedThesisDetails] = useState([]);
   const imageContainerRef = useRef(null);
   const detailsContainerRef = useRef(null); // 新增一个ref用于详细信息的容器
-  const [clickedDirection, setClickedDirection] = useState(null); // "next", "prev", 或 null
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [isLeftClicked, setIsLeftClicked] = useState(false);
-  const [isRightClicked, setIsRightClicked] = useState(false);
   const [isLeftActive, setIsLeftActive] = useState(false); // 新状态：左箭头是否激活
   const [isRightActive, setIsRightActive] = useState(false); // 新状态：右箭头是否激活
   
