@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.75a14de7.css",
+    "main.css": "/HCIwebsite/static/css/main.25122b7e.css",
     "main.js": "/HCIwebsite/static/js/main.2cab0175.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
     "static/media/GenSenRounded-H.ttc": "/HCIwebsite/static/media/GenSenRounded-H.5faec928091c8308b68a.ttc",
@@ -20,12 +20,12 @@
     "static/media/ArrowR.svg": "/HCIwebsite/static/media/ArrowR.af4ea28559686f700777a02429c44975.svg",
     "static/media/ArrowR_D.svg": "/HCIwebsite/static/media/ArrowR_D.77709abb0b11f6ad58e627e18a5a36fa.svg",
     "index.html": "/HCIwebsite/index.html",
-    "main.75a14de7.css.map": "/HCIwebsite/static/css/main.75a14de7.css.map",
+    "main.25122b7e.css.map": "/HCIwebsite/static/css/main.25122b7e.css.map",
     "main.2cab0175.js.map": "/HCIwebsite/static/js/main.2cab0175.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75a14de7.css",
+    "static/css/main.25122b7e.css",
     "static/js/main.2cab0175.js"
   ]
 }
