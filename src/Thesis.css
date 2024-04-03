@@ -17,11 +17,15 @@
 }
 
 .placeholder {
-    width: 120px;
-    height: 120px; /* 确保方形的尺寸 */
-    background-color:transparent; /* 黑色 */
-    margin: 0 20px; /* 添加一些外边距以便于观察 */
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    margin: 0 20px;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
 }
+
+
+
 .year-container {
     position: relative;
     width: 120px; /* 与图像尺寸相匹配 */
@@ -129,6 +133,12 @@ line-height: 120%; /* 21.6px */
       
 }
 @media (max-width: 768px) {
+    .placeholder {
+        display: none;
+    }
+    .arrow-left, .arrow-right {
+        display: none;
+      }
     .image-container {
         height: 70px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     }
