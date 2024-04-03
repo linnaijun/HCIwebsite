@@ -16,10 +16,7 @@ function Thesis({ height }) {
   const [selectedThesisDetails, setSelectedThesisDetails] = useState([]);
   const imageContainerRef = useRef(null);
   const detailsContainerRef = useRef(null);
-  const [clickedDirection, setClickedDirection] = useState(null);
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [isLeftClicked, setIsLeftClicked] = useState(false);
-  const [isRightClicked, setIsRightClicked] = useState(false);
+
   const [isLeftActive, setIsLeftActive] = useState(false);
   const [isRightActive, setIsRightActive] = useState(false);
 
@@ -47,10 +44,7 @@ function Thesis({ height }) {
     setSelectedYear(year);
     const selectedDetails = thesisData[0].filter(item => item.year === year);
     setSelectedThesisDetails(selectedDetails);
-    setIsDisabled(false);
-    setClickedDirection(null);
-    setIsLeftClicked(false);
-    setIsRightClicked(false);
+   
   };
 
   const handlePlaceholderClick = (direction) => {
@@ -60,18 +54,11 @@ function Thesis({ height }) {
     if (newIndex >= 0 && newIndex < years.length) {
       const newYear = years[newIndex];
       handleClick(newYear, newIndex);
-      setClickedDirection(direction);
+     
     } else {
-      setIsDisabled(true);
-      setClickedDirection(direction);
+     
     }
-    if (direction === 'prev') {
-      setIsLeftClicked(true);
-      setIsRightClicked(false);
-    } else if (direction === 'next') {
-      setIsRightClicked(true);
-      setIsLeftClicked(false);
-    }
+
   };
 
   const isPrevDisabled = selectedYear === years[0];
