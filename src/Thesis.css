@@ -140,6 +140,7 @@ line-height: 120%; /* 21.6px */
         display: none;
       }
     .image-container {
+        width:480px;
         height: 70px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     }
     .year-container {
