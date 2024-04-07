@@ -7,6 +7,49 @@
   pointer-events: none;
 }
 
+@font-face {
+  font-family: 'GenSenRounded TW';
+  src: url('./font/woff/GenSenRoundedTW-M-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-M-01.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'GenSenRounded B';
+  src: url('./font/woff/GenSenRoundedTW-B-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-B-01.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'GenSenRounded EL';
+  src: url('./font/woff/GenSenRoundedTW-EL-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-EL-01.ttf') format("truetype");
+}
+
+
+@font-face {
+  font-family: 'GenSenRounded H';
+  src: url('./font/woff/GenSenRoundedTW-H-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-H-01.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'GenSenRounded L';
+  src: url('./font/woff/GenSenRoundedTW-L-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-L-01.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'GenSenRounded M';
+  src: url('./font/woff/GenSenRoundedTW-M-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-M-01.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'GenSenRounded R';
+  src: url('./font/woff/GenSenRoundedTW-R-01.woff') format("woff"),
+        url('./font/ttf/GenSenRoundedTW-R-01.ttf') format("truetype");
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
