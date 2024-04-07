@@ -102,7 +102,7 @@
 }
 
 .linkButton {
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded B";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -119,8 +119,8 @@
   /* 按钮背景透明 */
   color: #333;
   /* 按钮文字颜色 */
-  font-size: 16px;
-  /* 文字大小 */
+  /*font-size: 16px;*/
+  /* 文字大小 重複設定進行刪除*/
 
   text-decoration: none;
   /* 去除下划线 */
@@ -185,7 +185,7 @@
   /* 保持文字直立顯示 */
   transform: rotate(0deg);
   /* 確保文字方向正確 */
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded B";
   /* 設定特定字體 */
   font-size: 23px;
   /* 根據Figma設計調整字體大小 */

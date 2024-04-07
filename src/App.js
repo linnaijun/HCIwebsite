@@ -157,8 +157,8 @@ function App() {
         <div className={`fixedBox ${isSidebarVisible ? '' : 'hideSidebar'}`} style={{ backgroundColor: sidebarBgColor }}>
           <div className={`verticalText ${newTextAnimation}`}>{currentText}</div>
         </div>
-        <Title height="100vh" id="title" /> {/*偷偷改動*/}
-        <Faculty height="800px" id="faculty" />
+        <Title height="calc(100vh - 60px)" id="title" /> {/*二改：扣掉header*/}
+        <Faculty height="700px" id="faculty" />
         <Thesis height="800px" id="thesis" />
         <Topics height="800px" id="topics" />
         <Honors height="800px" id="honors" />
