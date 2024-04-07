@@ -94,7 +94,7 @@ function App() {
       setSidebarBgColor(COLORS.evenSectionBackground);
       setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.thesis && scrollPosition < positions.topics) {
-      setNewText('研究室指導教授');
+      setNewText('研究生論文');
       setSidebarBgColor(COLORS.oddSectionBackground);
       setIsSidebarVisible(true); // 显示侧边栏
     } else if (scrollPosition >= positions.topics && scrollPosition < positions.honors) {
