@@ -1,35 +1,57 @@
 .photos {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: hidden; /* 保持滾動功能 */
-  -ms-overflow-style: none;  /* IE和Edge */
-  scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
+  /* 保持滾動功能 */
+  -ms-overflow-style: none;
+  /* IE和Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  align-items: center;
+  justify-content: center;
 }
 
 .photos::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, 和 Opera */
+  display: none;
+  /* Chrome, Safari, 和 Opera */
 }
 
 .photo-container {
-  width: 50px; /* 裁剪后的宽度 */
-  height: auto;
+  padding: 8px;
+}
+
+.photo-container .photo-box {
+
+  width: 136px;
+  /* 遮罩狀態下寬高 */
+  height: 640px;
   overflow: hidden;
   display: inline-block;
-  margin: 0 20px; /* 更新左右间距，保持视觉上的平衡 */
-  transition: width 0.5s ease; /* 平滑过渡效果 */
-  border-radius: 20px; /* 添加圆角 */
+  border-radius: 65px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
 }
 
 .photo-container img {
-  width: 200px; /* 确保图片的原始宽度 */
-  transform: translateX(-50px); /* 初始状态下，图片向左偏移，以适应容器大小 */
-  transition: transform 0.5s ease; /* 平滑过渡效果 */
+  width: 456px;
+  height: 736px;
+  /* 圖片原始寬高 */
+  transform-origin: center center;
+  transition: all 0.5s ease-in-out;
+  /* 平滑过渡效果 */
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .photo-container.expanded {
-  width: 200px; /* 点击后容器宽度增加 */
+  padding: 16px;
 }
 
-.photo-container img.expanded {
-  transform: translateX(0); /* 点击后取消平移效果 */
+.photo-container.expanded .photo-box {
+  width: 456px;
+  height: 736px;
+
 }

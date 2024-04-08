@@ -23,12 +23,13 @@ const Camp = ({ height }) => {
       <div className="photos">
         {photos.map((photo) => (
           <div className={`photo-container ${expandedPhotoId === photo.id ? 'expanded' : ''}`} key={photo.id} onClick={() => handleImageClick(photo.id)}>
-            <img
-              src={photo.url}
-              alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
-              className={expandedPhotoId === photo.id ? 'expanded' : ''}
-              style={{ height:'100%' }}
-            />
+            <div className='photo-box'>
+              <img
+                src={photo.url}
+                alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
+                className={expandedPhotoId === photo.id ? 'expanded' : ''}
+              />
+            </div>
           </div>
         ))}
       </div>
