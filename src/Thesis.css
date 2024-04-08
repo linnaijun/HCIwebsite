@@ -1,5 +1,5 @@
 #thesis {
-    background-color: peachpuff;
+    background-color: #deeffe;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -93,9 +93,11 @@ line-height: 120%; /* 21.6px */
     height: 500px; /* 或其他固定高度 */
     width: 66%; /* 根据需要调整 */
     padding: 10px;
-    background-color: red; /* 可选：设置背景色以增加可读性 */
+    background-color: #fff; /* 可选：设置背景色以增加可读性 */
     margin-top: 20px;
     justify-content: flex-start; /* 确保子元素从容器的开始处排列 */
+    border-radius: 32px;
+    border: 0.50px #7EC0FC solid;
 }
 
 .text-display-area::-webkit-scrollbar {
@@ -121,17 +123,42 @@ line-height: 120%; /* 21.6px */
     min-width: min-content; /* 设置最小宽度为内容的宽度 */
     max-width: min-content; /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
     margin: 5px; /* 给方块之间添加一些间隙 */
-    background-color: #f0f0f0; /* 浅灰色背景 */
-     padding: 10px; /* 文本与色块边缘之间的间距 */
-    border-radius: 5px; /* 轻微的圆角边缘 */
-      /* 防止文本换行 */
-      white-space: nowrap;
-      /* 当文本超出方块宽度时，隐藏超出部分 */
-      overflow: hidden;
-      /* 添加省略号表示文本被截断 */
-      text-overflow: ellipsis;
-      
+    background-color: #deeffe; /* 浅灰色背景 */
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    border-radius: 24px; /* 圆角 */
+    /* 防止文本换行 */
+    white-space: nowrap;
+    /* 当文本超出方块宽度时，隐藏超出部分 */
+    overflow: hidden;
+    /* 添加省略号表示文本被截断 */
+    text-overflow: ellipsis; 
 }
+
+.block-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block-pacman {
+    background: url(./img/pacman.svg);
+    width: 94px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.block-text {
+    color: #55575A;
+    font-size: 18px;
+    font-family: 'GenSenRounded B';
+    font-weight: 700;
+    line-height: 27px;
+    word-wrap: break-word
+}
+
 @media (max-width: 768px) {
     .placeholder {
         display: none;

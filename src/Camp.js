@@ -27,6 +27,7 @@ const Camp = ({ height }) => {
               src={photo.url}
               alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
               className={expandedPhotoId === photo.id ? 'expanded' : ''}
+              style={{ height:'100%' }}
             />
           </div>
         ))}

@@ -44,7 +44,7 @@
 h4 {
     margin: 0;
     /* 標題字體/boldType@18 */
-    font-family: "GenSenRounded TW";
+    font-family: "GenSenRounded B";
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -55,7 +55,7 @@ h4 {
 h6 {
     margin: 0;
     /* 內容字體/MediumType@14 */
-    font-family: "GenSenRounded TW";
+    font-family: "GenSenRounded M";
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -68,7 +68,7 @@ p {
     text-align: center;
     margin: 0;
     /* 特規字體/領域簡介用 */
-    font-family: "GenSenRounded TW";
+    font-family: "GenSenRounded M";
     font-size: 13px;
     font-style: normal;
     font-weight: 500;

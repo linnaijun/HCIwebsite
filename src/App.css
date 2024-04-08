@@ -7,6 +7,50 @@
   pointer-events: none;
 }
 
+@font-face {
+  font-family: 'GenSenRounded TW';
+  src: url('./font/ttc/GenSenRounded-M.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-M-01.woff') format("woff");
+}
+
+@font-face {
+  font-family: 'GenSenRounded B';
+  src: url('./font/ttc/GenSenRounded-B.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-B-01.woff') format("woff");
+       
+}
+
+@font-face {
+  font-family: 'GenSenRounded EL';
+  src: url('./font/ttc/GenSenRounded-EL.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-EL-01.woff') format("woff");
+}
+
+
+@font-face {
+  font-family: 'GenSenRounded H';
+  src: url('./font/ttc/GenSenRounded-H.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-H-01.woff') format("woff");
+}
+
+@font-face {
+  font-family: 'GenSenRounded L';
+  src: url('./font/ttc/GenSenRounded-L.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-L-01.woff') format("woff");
+}
+
+@font-face {
+  font-family: 'GenSenRounded M';
+  src: url('./font/ttc/GenSenRounded-M.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-M-01.woff') format("woff");
+}
+
+@font-face {
+  font-family: 'GenSenRounded R';
+  src: url('./font/ttc/GenSenRounded-R.ttc') format("truetype"),
+        url('./font/woff/GenSenRoundedTW-R-01.woff') format("woff");
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -59,7 +103,7 @@
 }
 
 .linkButton {
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded B";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -76,8 +120,8 @@
   /* 按钮背景透明 */
   color: #333;
   /* 按钮文字颜色 */
-  font-size: 16px;
-  /* 文字大小 */
+  /*font-size: 16px;*/
+  /* 文字大小 重複設定進行刪除*/
 
   text-decoration: none;
   /* 去除下划线 */
@@ -142,7 +186,7 @@
   /* 保持文字直立顯示 */
   transform: rotate(0deg);
   /* 確保文字方向正確 */
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded B";
   /* 設定特定字體 */
   font-size: 23px;
   /* 根據Figma設計調整字體大小 */
