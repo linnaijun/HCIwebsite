@@ -128,7 +128,10 @@ function Thesis({ height }) {
             tabIndex="0"
             style={{ cursor: 'pointer' }}
           >
-            <p className="block-text" style={{ textAlign: 'left', margin: 0 }}>作者: {detail.author}</p>
+            <div className='block-top'>
+              <p className="block-text" style={{ textAlign: 'left', margin: 0 }}>作者: {detail.author}</p>
+              <div className='block-pacman'></div>
+            </div>
             <p className="block-text"style={{ textAlign: 'left', margin: 0 }}>標題: {detail.title}</p>
           </div>
         ))}

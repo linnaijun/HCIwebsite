@@ -137,6 +137,19 @@ line-height: 120%; /* 21.6px */
     text-overflow: ellipsis; 
 }
 
+.block-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block-pacman {
+    background: url(./img/pacman.svg);
+    width: 94px;
+    height: 24px;
+    margin-left: 10px;
+}
+
 .block-text {
     color: #55575A;
     font-size: 18px;

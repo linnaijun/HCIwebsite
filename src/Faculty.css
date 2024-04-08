@@ -187,7 +187,7 @@
     width: 392px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
     #faculty {
         height: 574px;
         padding-top: 0px;
@@ -214,7 +214,7 @@
         background: url(./img/faculty/planetForProfessorRight768.svg)no-repeat;
         width: 140px;
         height: 112px;
-        top: -77px;
+        top: -60px;
         left: -48px;
     }
     
@@ -284,7 +284,7 @@
         width: 140px;
         height: 112px;
         top: 365px;
-        right: -48px;
+        right: -40px;
     }
     
     .faculty_img2 {
@@ -307,7 +307,7 @@
     }
 }
 
-@media screen and (min-width: 593px) and (max-width: 768px) {
+@media (max-width: 768px) {
     #faculty {
         height: 996px;
         padding-top: 0px;
@@ -428,7 +428,7 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 593px) {
+@media (max-width: 608px) {
     #faculty {
         height: 996px;
         padding-top: 0px;
@@ -440,6 +440,7 @@
     .faculty_main {
         width: 100%;
         flex-direction: column;
+        padding: 0;
     }
 
     .faculty_fan {

@@ -96,7 +96,7 @@
     height: 80px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
     .title_bgm {
         background: url(./img/keyvision/keyVisionBG768.svg);
         width: 681px;
@@ -151,7 +151,7 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width:768px){
+@media (max-width:768px){
     .title_bgm {
         background: url(./img/keyvision/keyVisionBG375.svg);
         width: 555px;
