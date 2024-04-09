@@ -1,4 +1,6 @@
 #thesis {
+    background: url(./img/thests_bg.svg)no-repeat center center;
+    background-size: cover;
     background-color: #deeffe;
     padding: 20px;
     display: flex;
@@ -123,7 +125,7 @@ line-height: 120%; /* 21.6px */
     min-width: min-content; /* 设置最小宽度为内容的宽度 */
     max-width: min-content; /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
     margin: 5px; /* 给方块之间添加一些间隙 */
-    background-color: #deeffe; /* 浅灰色背景 */
+    background-color: #deeffe; 
     padding-left: 24px;
     padding-top: 12px;
     padding-bottom: 12px;
