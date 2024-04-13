@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Camp.css';
 import CampData from './Camp.json';
 
-const Camp = ({ height }) => {
+const Camp = () => {
   const [photos, setPhotos] = useState([]);
   const [expandedPhotoId, setExpandedPhotoId] = useState(4);
   const [showTextPhotoId, setShowTextPhotoId] = useState(4);
@@ -29,23 +29,25 @@ const Camp = ({ height }) => {
   };
 
   return (
-    <div id="camp" style={{ height, backgroundColor: 'lightblue', padding: '20px', overflowX: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div className="photos">
-        {photos.map((photo) => (
-          <div className={`photo-container ${expandedPhotoId === photo.id ? 'expanded' : ''} ${showTextPhotoId === photo.id ? 'showText' : ''}`} key={photo.id} onClick={() => handleImageClick(photo.id)}>
-            <div className='photo-box'>
-              <img
-                src={photo.url}
-                alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
-                className={expandedPhotoId === photo.id ? 'expanded' : ''}
-              />
-              <div className='text'>
-                <h4>{photo.name}</h4>
-                <p>{photo.desc}</p>
+    <div id="camp">
+      <div className='container'>
+        <div className="photos">
+          {photos.map((photo) => (
+            <div className={`photo-container ${expandedPhotoId === photo.id ? 'expanded' : ''} ${showTextPhotoId === photo.id ? 'showText' : ''}`} key={photo.id} onClick={() => handleImageClick(photo.id)}>
+              <div className='photo-box'>
+                <img
+                  src={photo.url}
+                  alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
+                  className={expandedPhotoId === photo.id ? 'expanded' : ''}
+                />
+                <div className='text'>
+                  <h4>{photo.name}</h4>
+                  <p>{photo.desc}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

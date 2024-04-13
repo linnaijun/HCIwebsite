@@ -1,4 +1,10 @@
+#camp {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
 .photos {
+  height: 600px;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
@@ -18,16 +24,17 @@
 
 .photo-container {
   padding: 8px;
+  width: 10%;
+  transition: all 0.5s ease-in-out;
 }
 
 .photo-container .photo-box {
-
-  width: 136px;
+  width: 100%;
   /* 遮罩狀態下寬高 */
-  height: 640px;
+  height: 440px;
   overflow: hidden;
   display: inline-block;
-  border-radius: 65px;
+  border-radius: 60px;
   transition: all 0.5s ease-in-out;
   position: relative;
 }
@@ -52,7 +59,7 @@
   transition: all 1s ease-in-out;
 
   position: absolute;
-  width: calc(456px - 48px);
+  width: calc(100% - 48px);
   left: 0;
   bottom: 50px;
   text-align: left;
@@ -96,11 +103,11 @@
 
 .photo-container.expanded {
   padding: 16px;
+  width: 40%;
 }
 
 .photo-container.expanded .photo-box {
-  width: 456px;
-  height: 736px;
+  height: 560px;
 
 }
 
