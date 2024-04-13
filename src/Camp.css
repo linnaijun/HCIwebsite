@@ -56,7 +56,7 @@
 .photo-container .photo-box .text {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 1s ease-in-out;
+  transition: all .5s ease-in-out;
 
   position: absolute;
   width: calc(100% - 48px);
