@@ -26,6 +26,7 @@
   padding: 8px;
   width: 10%;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .photo-container .photo-box {
@@ -53,17 +54,25 @@
   transform: translate(-50%, -50%);
 }
 
-.photo-container .photo-box .text {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all .5s ease-in-out;
-
+.photo-container .photo-box .text h4 {
+  transform: translateX(-50%);
+  word-break: break-word;
+  line-height: 1;
+  width: 25px;
+  height: 100%;
+  padding: 0;
   position: absolute;
-  width: calc(100% - 48px);
-  left: 0;
-  bottom: 50px;
-  text-align: left;
-  padding: 24px;
+  left: 50%;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.photo-container .photo-box .text p {
+  opacity: 0;
   z-index: -1;
 }
 
@@ -84,7 +93,7 @@
   font-size: 23px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.5;
+
 }
 
 .photo-container .photo-box .text p {
@@ -104,6 +113,7 @@
 .photo-container.expanded {
   padding: 16px;
   width: 40%;
+  cursor: default;
 }
 
 .photo-container.expanded .photo-box {
@@ -118,8 +128,31 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
-.photo-container.expanded.showText .photo-box .text {
-  opacity: 1;
-  transform: translateY(0px);
+.photo-container.expanded .photo-box .text {
+  position: absolute;
+  left: 0;
+  width: calc(100% - 48px);
+  padding: 24px;
+  bottom: 50px;
   z-index: 1;
+  opacity: 0;
+}
+
+
+.photo-container.expanded .photo-box .text h4 {
+  word-break: normal;
+  height: auto;
+  position: static;
+  transform: none;
+  width: auto;
+  display: block;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.photo-container.expanded.showText .photo-box .text,
+.photo-container.expanded.showText .photo-box .text h4,
+.photo-container.expanded.showText .photo-box .text p {
+  opacity: 1;
+  transition: all .5s ease-in-out;
 }

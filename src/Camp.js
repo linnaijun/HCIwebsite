@@ -12,6 +12,7 @@ const Camp = () => {
   }, []);
 
   const handleImageClick = (id) => {
+
     if (expandedPhotoId === id) {
       setExpandedPhotoId(null); // 如果点击的是已展开的图片，则关闭
     } else {
