@@ -41,8 +41,8 @@
 }
 
 .photo-container img {
-  width: 456px;
-  height: 736px;
+  width: 100%;
+  height: 100%;
   /* 圖片原始寬高 */
   transform-origin: center center;
   transition: all 0.5s ease-in-out;
@@ -118,14 +118,22 @@
 
 .photo-container.expanded .photo-box {
   height: 560px;
-
 }
 
 .photo-container.expanded .photo-box:before {
-  width: 456px;
-  height: 736px;
+  /* width: 456px;
+  height: 736px; */
   height: 30%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    /*以下締改*/
+    /* content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    left: 0;
+    bottom: 0;
+    z-index: 1; */
 }
 
 .photo-container.expanded .photo-box .text {
@@ -155,4 +163,9 @@
 .photo-container.expanded.showText .photo-box .text p {
   opacity: 1;
   transition: all .5s ease-in-out;
+}
+
+/* 添加hover效果 */
+.photo-container:hover {
+  transform: scale(1.035);  /* 細微放大 */
 }
