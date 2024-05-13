@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.a7b699b6.css",
-    "main.js": "/HCIwebsite/static/js/main.f8fc9699.js",
+    "main.css": "/HCIwebsite/static/css/main.d8f08a33.css",
+    "main.js": "/HCIwebsite/static/js/main.44822368.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
     "static/media/GenSenRounded-H.ttc": "/HCIwebsite/static/media/GenSenRounded-H.5faec928091c8308b68a.ttc",
     "static/media/GenSenRounded-B.ttc": "/HCIwebsite/static/media/GenSenRounded-B.3a6f48270731b2cdbde8.ttc",
@@ -64,12 +64,12 @@
     "static/media/keyVisionBG1440.svg": "/HCIwebsite/static/media/keyVisionBG1440.71175f80643c3b95e080.svg",
     "static/media/keyVisionBG375.svg": "/HCIwebsite/static/media/keyVisionBG375.16d56913622dc46f5dfa.svg",
     "static/media/keyVisionBG768.svg": "/HCIwebsite/static/media/keyVisionBG768.fe4b67dd0e3a905520fd.svg",
-    "main.a7b699b6.css.map": "/HCIwebsite/static/css/main.a7b699b6.css.map",
-    "main.f8fc9699.js.map": "/HCIwebsite/static/js/main.f8fc9699.js.map",
+    "main.d8f08a33.css.map": "/HCIwebsite/static/css/main.d8f08a33.css.map",
+    "main.44822368.js.map": "/HCIwebsite/static/js/main.44822368.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7b699b6.css",
-    "static/js/main.f8fc9699.js"
+    "static/css/main.d8f08a33.css",
+    "static/js/main.44822368.js"
   ]
 }
