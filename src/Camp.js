@@ -1,14 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import './Camp.css';
 import CampData from './Camp.json';
+import campIMG01 from './img/camp/campIMG01.png';
+import campIMG02 from './img/camp/campIMG02.png';
+import campIMG03 from './img/camp/campIMG03.png';
+import campIMG04 from './img/camp/campIMG04.png';
+import campIMG05 from './img/camp/campIMG05.png';
+import campIMG06 from './img/camp/campIMG06.png';
+import campIMG07 from './img/camp/campIMG07.png';
+
+
+const images = {
+  campIMG01,
+  campIMG02,
+  campIMG03,
+  campIMG04,
+  campIMG05,
+  campIMG06,
+  campIMG07
+};
 
 const Camp = () => {
   const [photos, setPhotos] = useState([]);
   const [expandedPhotoId, setExpandedPhotoId] = useState(4);
   const [showTextPhotoId, setShowTextPhotoId] = useState(4);
 
+  // useEffect(() => {
+  //   setPhotos([...CampData]);
+  // }, []);
+
   useEffect(() => {
-    setPhotos([...CampData]);
+    // 將對應的圖片URL加入到CampData
+    const updatedPhotos = CampData.map(photo => ({
+      ...photo,
+      url: images[photo.url]
+    }));
+    setPhotos(updatedPhotos);
   }, []);
 
   const handleImageClick = (id) => {
@@ -38,7 +65,8 @@ const Camp = () => {
               <div className='photo-box'>
                 <img
                   src={photo.url}
-                  alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
+                  // alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
+                  alt={`Image of ${photo.name}`} //無障礙處理，若真的無圖，顯示該營隊名稱
                   className={expandedPhotoId === photo.id ? 'expanded' : ''}
                 />
                 <div className='text'>
