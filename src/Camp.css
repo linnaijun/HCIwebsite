@@ -58,7 +58,9 @@
   transform: translateX(-50%);
   word-break: break-word;
   line-height: 1.4;
-  width: 25px;
+  /* width: 25px; */
+  /*締改*/
+  width: 32px;
   height: 100%;
   padding: 0;
   position: absolute;
