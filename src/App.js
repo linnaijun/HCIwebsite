@@ -199,18 +199,19 @@ function App() {
             </p>
           </div>
           <div className="footer_right">
-            <a href="https://maps.app.goo.gl/1QJNthfZHUrb42yr7" target='_blank'>
-              <img src={footer_map} alt="footer_map" />
-            </a>
-            <ul>
-              <li>如何聯絡我們</li>
-              <li className='phone'>
-                <span className='icon_phone'></span>(02)2732-1104分機63533
-              </li>
-              <li className='addr'>
-                <span className='icon_addr'></span> 10671 台北市大安區和平東路2段134號科學館5樓B507室
-              </li></ul>
-          </div>
+  <a href="https://maps.app.goo.gl/1QJNthfZHUrb42yr7" target="_blank" rel="noopener noreferrer">
+    <img src={footer_map} alt="footer_map" />
+  </a>
+  <ul>
+    <li>如何聯絡我們</li>
+    <li className='phone'>
+      <span className='icon_phone'></span>(02)2732-1104分機63533
+    </li>
+    <li className='addr'>
+      <span className='icon_addr'></span>10671 台北市大安區和平東路2段134號科學館5樓B507室
+    </li>
+  </ul>
+</div>
 
         </div>
       </footer>
