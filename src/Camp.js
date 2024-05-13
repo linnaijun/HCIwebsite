@@ -66,7 +66,7 @@ const Camp = () => {
                 <img
                   src={photo.url}
                   // alt={photo.id === 'blank' ? 'Transparent Placeholder' : `Photo ${photo.id}`}
-                  alt={`Image of ${photo.name}`} //無障礙處理，若真的無圖，顯示該營隊名稱
+                  alt={photo.name} //無障礙處理，若真的無圖，顯示該營隊名稱
                   className={expandedPhotoId === photo.id ? 'expanded' : ''}
                 />
                 <div className='text'>
