@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.5cf9d2c6.css",
-    "main.js": "/HCIwebsite/static/js/main.c3d6377f.js",
+    "main.css": "/HCIwebsite/static/css/main.a7b699b6.css",
+    "main.js": "/HCIwebsite/static/js/main.caa7277e.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
     "static/media/GenSenRounded-H.ttc": "/HCIwebsite/static/media/GenSenRounded-H.5faec928091c8308b68a.ttc",
     "static/media/GenSenRounded-B.ttc": "/HCIwebsite/static/media/GenSenRounded-B.3a6f48270731b2cdbde8.ttc",
@@ -23,12 +23,15 @@
     "static/media/campIMG03.png": "/HCIwebsite/static/media/campIMG03.b658956175006d1d105d.png",
     "static/media/campIMG05.png": "/HCIwebsite/static/media/campIMG05.2ff7d643415e7659851c.png",
     "static/media/Topics_bg.png": "/HCIwebsite/static/media/Topics_bg.85461874214f2be03be5.png",
+    "static/media/footer_map.png": "/HCIwebsite/static/media/footer_map.11a5664aadb48f7e9fdf.png",
+    "static/media/footer_bigwave.png": "/HCIwebsite/static/media/footer_bigwave.2161d60f357704b2d27d.png",
     "static/media/professorYU768.svg": "/HCIwebsite/static/media/professorYU768.7cdcef58632c15619ba5.svg",
     "static/media/professorYU1440.svg": "/HCIwebsite/static/media/professorYU1440.46386571a404af70ccd7.svg",
     "static/media/PlanetW.svg": "/HCIwebsite/static/media/PlanetW.29654abfea30503582f83b1d4cd6246e.svg",
     "static/media/professorFAN768.svg": "/HCIwebsite/static/media/professorFAN768.5c0c4187007fd3923a5a.svg",
     "static/media/professorFAN1440.svg": "/HCIwebsite/static/media/professorFAN1440.785b900dc155203246c4.svg",
     "static/media/keyVisionRight768.svg": "/HCIwebsite/static/media/keyVisionRight768.806e64ecfc4b743fbf32.svg",
+    "static/media/footer_logo.svg": "/HCIwebsite/static/media/footer_logo.be2cdee2012c086fb159ed6132507ace.svg",
     "static/media/keyVisionRight375.svg": "/HCIwebsite/static/media/keyVisionRight375.71cc18f8fd57b66e5de0.svg",
     "static/media/logo.svg": "/HCIwebsite/static/media/logo.ce7b36d595757445440af2fd09fc2e06.svg",
     "static/media/keyVisionRight1440.svg": "/HCIwebsite/static/media/keyVisionRight1440.377f223559438616fa52.svg",
@@ -38,9 +41,12 @@
     "static/media/planetForProfessorLeft1440.svg": "/HCIwebsite/static/media/planetForProfessorLeft1440.0355a706f00db92d6b2f.svg",
     "static/media/planetForProfessorRight1440.svg": "/HCIwebsite/static/media/planetForProfessorRight1440.8d0eaf95344cac1671fc.svg",
     "static/media/keyVisionLeft768.svg": "/HCIwebsite/static/media/keyVisionLeft768.612d00cec7308a9bf98b.svg",
+    "static/media/footer_logoName.svg": "/HCIwebsite/static/media/footer_logoName.8ca49bc27a107a9f4e16acfc64a49c90.svg",
     "static/media/keyVisionLeft1440.svg": "/HCIwebsite/static/media/keyVisionLeft1440.2ff362a883922a2de4eb.svg",
     "static/media/pacman.svg": "/HCIwebsite/static/media/pacman.dc94561ddd36c9e15884.svg",
     "static/media/phone.svg": "/HCIwebsite/static/media/phone.688df6b3d8aae5fedb36.svg",
+    "static/media/footer_phone.svg": "/HCIwebsite/static/media/footer_phone.229b8a01ec0199d8d8be.svg",
+    "static/media/footer_addr.svg": "/HCIwebsite/static/media/footer_addr.1465c57291d3647a93c0.svg",
     "static/media/KeyVisionArrow1440.svg": "/HCIwebsite/static/media/KeyVisionArrow1440.69a87757fff6c18b86b5.svg",
     "static/media/mail.svg": "/HCIwebsite/static/media/mail.69a905c57e8eddf28f54.svg",
     "static/media/KeyVisionArrow375.svg": "/HCIwebsite/static/media/KeyVisionArrow375.0f8fa1e938bf42f47b14.svg",
@@ -58,12 +64,12 @@
     "static/media/keyVisionBG1440.svg": "/HCIwebsite/static/media/keyVisionBG1440.71175f80643c3b95e080.svg",
     "static/media/keyVisionBG375.svg": "/HCIwebsite/static/media/keyVisionBG375.16d56913622dc46f5dfa.svg",
     "static/media/keyVisionBG768.svg": "/HCIwebsite/static/media/keyVisionBG768.fe4b67dd0e3a905520fd.svg",
-    "main.5cf9d2c6.css.map": "/HCIwebsite/static/css/main.5cf9d2c6.css.map",
-    "main.c3d6377f.js.map": "/HCIwebsite/static/js/main.c3d6377f.js.map",
+    "main.a7b699b6.css.map": "/HCIwebsite/static/css/main.a7b699b6.css.map",
+    "main.caa7277e.js.map": "/HCIwebsite/static/js/main.caa7277e.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cf9d2c6.css",
-    "static/js/main.c3d6377f.js"
+    "static/css/main.a7b699b6.css",
+    "static/js/main.caa7277e.js"
   ]
 }
