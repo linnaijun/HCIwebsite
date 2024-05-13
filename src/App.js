@@ -48,7 +48,7 @@ function App() {
   };
 
   useEffect(() => {
-    document.title = "研究所";
+    document.title = "GAME x HCI Lab.";
   }, []); // 空依賴數組表示這個效果只會在組件掛載時運行一次
 
   useEffect(() => {
