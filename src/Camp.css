@@ -165,7 +165,3 @@
   transition: all .5s ease-in-out;
 }
 
-/* 添加hover效果 */
-.photo-container:hover {
-  transform: scale(1.035);  /* 細微放大 */
-}
