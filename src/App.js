@@ -7,6 +7,9 @@ import Album from './Album'; // 假设 Album 是相簿组件
 import Camp from './Camp';
 import Contact from './Contact';
 import logo from './img/logo.svg'; // 导入图片
+import footer_logo from './img/footer_logo.svg';
+import footer_map from './img/footer_map.png';
+import footer_logoName from './img/footer_logoName.svg';
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import './App.css'; // 確保你的樣式被正確導入
 import './Common.css'; // 通用樣式
@@ -83,7 +86,7 @@ function App() {
       contact: document.getElementById('contact') ? document.getElementById('contact').offsetTop : 0,
     };
 
-    
+
     // 使用if-else if结构来根据滚动位置设置newText和sidebarBgColor
     if (scrollPosition >= positions.title && scrollPosition < positions.faculty) {
       setNewText('標題');
@@ -164,13 +167,48 @@ function App() {
         <Honors height="800px" id="honors" />
         <Album height="800px" id="album" />
         <Camp height="800px" id="camp" />
-        <Contact height="800px" id="contact" />
+        {/* <Contact height="800px" id="contact" /> */}
         <button onClick={scrollToTop} className="scrollToTopButton">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
             <path d="M30 25L20 15L10 25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
       </div>
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer_left">
+            <div className="footer_logo">
+              <img src={footer_logo} alt="footer_Logo" />
+            </div>
+            <div className="footer_text">
+              <div className="logoName">
+                <img src={footer_logoName} alt="footer_logoName" />
+              </div>
+              <h3>遊戲與人機互動設計研究室</h3>
+              <p>無論您是尋找遊戲設計的專業合作夥伴，還是想參與引領遊戲科技的前沿，我們的研究室都是一個充滿激勵且開放的環境。歡迎加入我們，一同打破傳統，創建出獨一無二的遊戲體驗！</p>
+              <p className='text_end hidden_sm'>
+                © 2024 遊戲與人機互動設計研究室版權所有
+              </p>
+            </div>
+            <p className='text_end show_sm'>
+              © 2024 遊戲與人機互動設計研究室版權所有
+            </p>
+          </div>
+          <div className="footer_right">
+            <img src={footer_map} alt="footer_map" />
+            <ul>
+              <li>如何聯絡我們</li>
+              <li className='phone'>
+                <span className='icon_phone'></span>(02)2732-1104分機63533
+              </li>
+              <li className='addr'>
+                <span className='icon_addr'></span> 10671 台北市大安區和平東路2段134號科學館5樓B507室
+              </li></ul>
+          </div>
+
+        </div>
+      </footer>
+
     </div>
   );
 
