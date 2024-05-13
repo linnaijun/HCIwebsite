@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.cf1a0c55.css",
-    "main.js": "/HCIwebsite/static/js/main.49a7f323.js",
+    "main.css": "/HCIwebsite/static/css/main.5cf9d2c6.css",
+    "main.js": "/HCIwebsite/static/js/main.c3d6377f.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
     "static/media/GenSenRounded-H.ttc": "/HCIwebsite/static/media/GenSenRounded-H.5faec928091c8308b68a.ttc",
     "static/media/GenSenRounded-B.ttc": "/HCIwebsite/static/media/GenSenRounded-B.3a6f48270731b2cdbde8.ttc",
@@ -15,6 +15,13 @@
     "static/media/GenSenRoundedTW-R-01.woff": "/HCIwebsite/static/media/GenSenRoundedTW-R-01.d4bc665f714abfb575d2.woff",
     "static/media/GenSenRoundedTW-L-01.woff": "/HCIwebsite/static/media/GenSenRoundedTW-L-01.9d004829c343cac4c17d.woff",
     "static/media/GenSenRoundedTW-EL-01.woff": "/HCIwebsite/static/media/GenSenRoundedTW-EL-01.41bdaa3c649c21011236.woff",
+    "static/media/campIMG01.png": "/HCIwebsite/static/media/campIMG01.6a578c70bee42c21bcd0.png",
+    "static/media/campIMG07.png": "/HCIwebsite/static/media/campIMG07.2e0155e84c991d833b9f.png",
+    "static/media/campIMG04.png": "/HCIwebsite/static/media/campIMG04.08b5d45781ce5e13d7af.png",
+    "static/media/campIMG06.png": "/HCIwebsite/static/media/campIMG06.c1496c2050eabe332d76.png",
+    "static/media/campIMG02.png": "/HCIwebsite/static/media/campIMG02.bb17ec0a21bb50d582fb.png",
+    "static/media/campIMG03.png": "/HCIwebsite/static/media/campIMG03.b658956175006d1d105d.png",
+    "static/media/campIMG05.png": "/HCIwebsite/static/media/campIMG05.2ff7d643415e7659851c.png",
     "static/media/Topics_bg.png": "/HCIwebsite/static/media/Topics_bg.85461874214f2be03be5.png",
     "static/media/professorYU768.svg": "/HCIwebsite/static/media/professorYU768.7cdcef58632c15619ba5.svg",
     "static/media/professorYU1440.svg": "/HCIwebsite/static/media/professorYU1440.46386571a404af70ccd7.svg",
@@ -51,12 +58,12 @@
     "static/media/keyVisionBG1440.svg": "/HCIwebsite/static/media/keyVisionBG1440.71175f80643c3b95e080.svg",
     "static/media/keyVisionBG375.svg": "/HCIwebsite/static/media/keyVisionBG375.16d56913622dc46f5dfa.svg",
     "static/media/keyVisionBG768.svg": "/HCIwebsite/static/media/keyVisionBG768.fe4b67dd0e3a905520fd.svg",
-    "main.cf1a0c55.css.map": "/HCIwebsite/static/css/main.cf1a0c55.css.map",
-    "main.49a7f323.js.map": "/HCIwebsite/static/js/main.49a7f323.js.map",
+    "main.5cf9d2c6.css.map": "/HCIwebsite/static/css/main.5cf9d2c6.css.map",
+    "main.c3d6377f.js.map": "/HCIwebsite/static/js/main.c3d6377f.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf1a0c55.css",
-    "static/js/main.49a7f323.js"
+    "static/css/main.5cf9d2c6.css",
+    "static/js/main.c3d6377f.js"
   ]
 }
