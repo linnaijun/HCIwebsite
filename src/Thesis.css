@@ -1,5 +1,5 @@
 #thesis {
-    background: url(./img/Thesis_bg.svg)no-repeat center top;
+    background: url(./img/Thesis_bg.svg)no-repeat center bottom;
     background-size: cover;
     background-color: #deeffe;
     height: 1086px; /*1126-40(padding) */
