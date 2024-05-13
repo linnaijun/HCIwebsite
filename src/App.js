@@ -164,8 +164,8 @@ function App() {
         <Faculty height="700px" id="faculty" />
         <Thesis height="800px" id="thesis" />
         <Topics height="800px" id="topics" />
-        <Honors height="800px" id="honors" />
-        <Album height="800px" id="album" />
+        {/* <Honors height="800px" id="honors" /> */}
+        {/* <Album height="800px" id="album" /> */}
         <Camp height="800px" id="camp" />
         {/* <Contact height="800px" id="contact" /> */}
         <button onClick={scrollToTop} className="scrollToTopButton">
@@ -195,7 +195,9 @@ function App() {
             </p>
           </div>
           <div className="footer_right">
-            <img src={footer_map} alt="footer_map" />
+            <a href="https://maps.app.goo.gl/1QJNthfZHUrb42yr7" target='_blank'>
+              <img src={footer_map} alt="footer_map" />
+            </a>
             <ul>
               <li>如何聯絡我們</li>
               <li className='phone'>
