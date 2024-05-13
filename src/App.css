@@ -419,6 +419,20 @@ footer:after {
   background-size: 100%;
 }
 
+@media (max-width: 1440px) {
+  .fixedBox {
+    width: 14px;
+    height: 120px;
+    font-size: 14px;
+    border-radius: 0px 14px 14px 0px;
+    padding: 24px 8px;
+    background: #7EC0FC;
+  }
+
+  .verticalText {
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 1240px) {
   footer {
@@ -481,6 +495,19 @@ footer:after {
     height: 12px;
     top: 2px;
   }
+
+  .fixedBox {
+    width: 14px;
+    height: 120px;
+    font-size: 14px;
+    border-radius: 0px 14px 14px 0px;
+    padding: 24px 8px;
+    background: #7EC0FC;
+  }
+
+  .verticalText {
+    font-size: 14px;
+  }
 }
 
 
@@ -496,6 +523,10 @@ footer:after {
     transform: translateX(-50px);
     /* 增加移动距离以强化效果 */
   }
+
+  
+
+
 }
 
 @media (max-width: 768px) {
@@ -728,7 +759,7 @@ footer:after {
   }
 
   .fixedBox {
-    width: 14 px;
+    width: 14px;
     height: 120px;
     font-size: 14px;
     border-radius: 0px 14px 14px 0px;

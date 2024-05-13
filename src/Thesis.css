@@ -1,11 +1,12 @@
 #thesis {
+    background: url(./img/Thesis_bg.svg)no-repeat center top;
+    background-size: cover;
     background-color: #deeffe;
+    height: 1086px; /*1126-40(padding) */
     padding: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-   
 }
 
 .images-row {
@@ -34,10 +35,7 @@
     justify-content: center;
     align-items: center;
     display: flex; /* 启用Flexbox布局 */
-  flex-direction: row; /* 子元素横向排列 */
- 
-  gap: 10px; /* 设置子元素之间的间隔 */
-  margin-bottom: 10px; /* 为每个年份容器底部添加一些外边距 */
+    flex-direction: row; /* 子元素横向排列 */
   }
   
   .planet-image {
@@ -51,14 +49,12 @@
     z-index: 1;
     color: #7EC0FC;
     text-align: center;
-/* 特規字體/論文年份使用 */
-font-family: "GenSenRounded TW";
-font-size: 18px;
-font-style: normal;
-font-weight: 900;
-line-height: 120%; /* 21.6px */
-   
-   
+    /* 特規字體/論文年份使用 */
+    font-family: "GenSenRounded H";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%; /* 21.6px */
   }
   
 .image-container {
@@ -66,7 +62,7 @@ line-height: 120%; /* 21.6px */
     display: flex; /* 允许水平滚动 */
     overflow-y: hidden; /* 隐藏垂直滚动 */
     white-space: nowrap; /* 防止内容换行，确保水平布局 */
-    width: 1200px; /* 容器宽度 */
+    width: 1104px; /* 容器宽度扣箭頭 */
     height: 120px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     scrollbar-width: none; /* 隐藏Firefox的滚动条 */
     -ms-overflow-style: none; /* 隐藏IE 10+的滚动条 */
@@ -90,9 +86,11 @@ line-height: 120%; /* 21.6px */
     flex-wrap: wrap;
     align-content: flex-start; /* 确保多行内容时也能向上对齐 */
     overflow-y: auto; /* 允许垂直滚动 */
-    height: 500px; /* 或其他固定高度 */
-    width: 66%; /* 根据需要调整 */
-    padding: 10px;
+    height: 848px; /* 根据需要调整 872-24(padding) */
+    width: 1168px; /* 根据需要调整 1216-48(padding)*/
+    padding: 24px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     background-color: #fff; /* 可选：设置背景色以增加可读性 */
     margin-top: 20px;
     justify-content: flex-start; /* 确保子元素从容器的开始处排列 */
@@ -101,13 +99,12 @@ line-height: 120%; /* 21.6px */
 }
 
 .text-display-area::-webkit-scrollbar {
-    width: 8px; /* 滚动条宽度 */
-    height: 8px; /* 滚动条高度（对水平滚动条有效） */
+    width: 6px; /* 滚动条宽度 */
 }
 
 /* 滚动条滑块 */
 .text-display-area::-webkit-scrollbar-thumb {
-    background: #888; /* 滑块颜色 */
+    background: #CFD9E1; /* 滑块颜色 */
     border-radius: 4px; /* 滑块圆角 */
 }
 
@@ -115,15 +112,16 @@ line-height: 120%; /* 21.6px */
 .text-display-area::-webkit-scrollbar-track {
     background: #f0f0f0; /* 轨道颜色 */
     border-radius: 4px; /* 轨道圆角 */
+    margin: 25px;
 }
 .text-display-area .detail-block {
     text-align: left;
-    height: 50px;
     flex: 1 1 auto; /* 允许方块根据内容自动调整宽度，但不允许它们长到超过它们的内容 */
     min-width: min-content; /* 设置最小宽度为内容的宽度 */
     max-width: min-content; /* 限制最大宽度为容器的50%，减去的10px是为了考虑间隙 */
-    margin: 5px; /* 给方块之间添加一些间隙 */
-    background-color: #deeffe; /* 浅灰色背景 */
+    margin-right: 16px; /* 给方块之间添加一些间隙 */
+    margin-bottom: 24px;
+    background-color: #deeffe; 
     padding-left: 24px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -141,16 +139,26 @@ line-height: 120%; /* 21.6px */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 4px;
 }
 
 .block-pacman {
     background: url(./img/pacman.svg);
-    width: 94px;
-    height: 24px;
+    width: 93px;
+    height: 25px;
     margin-left: 10px;
 }
 
-.block-text {
+.block-text1 {
+    color: #55575A;
+    font-size: 18px;
+    font-family: 'GenSenRounded B';
+    font-weight: 700;
+    line-height: 27px;
+    word-wrap: break-word
+}
+
+.block-text2 {
     color: #55575A;
     font-size: 18px;
     font-family: 'GenSenRounded B';
@@ -160,28 +168,44 @@ line-height: 120%; /* 21.6px */
 }
 
 @media (max-width: 768px) {
+    #thesis {
+        align-items: start;
+        height: 920px; /*960-40(padding) */
+    }
+
+    .images-row {
+        height: 92px;
+    }
+    
     .placeholder {
         display: none;
     }
+    
     .arrow-left, .arrow-right {
         display: none;
+    }
+
+    .year-text {
+        font-size: 17.5px;
+        font-weight: 900;
+        line-height: 21px;
       }
+
     .image-container {
-        width:480px;
+        width: auto;
         height: 70px; /* 容器高度，确保足够容纳图片而不需要垂直滚动 */
     }
     .year-container {
-      
-        width: 87px; /* 与图像尺寸相匹配 */
-        height: 62%; /* 与图像尺寸相匹配 */
-        
-
-      }
-      .image {
-        width: 87px;
-        height: 62px;
-        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin-right: -20px;
     }
+
+    .image {
+        width: 100px;
+        height: 100px;
+    }
+
     .placeholder {
         width: 87px;
         height: 62px;
@@ -189,19 +213,163 @@ line-height: 120%; /* 21.6px */
         margin: 0 20px; /* 添加一些外边距以便于观察 */
     }
 
-}
+    .text-display-area {
+        height: 772px; /* 792-20(padding) */
+        min-width: 90%;
+        width: auto;
+        padding: 16px;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        justify-content: center;
+        border-radius: 24px;
+    }
+    .text-display-area .detail-block {
+        height: 92px;
+        width: 100%;
+        min-width: none;
+        max-width: none;
+        padding: 8px 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        white-space: pre-wrap; /* 文本换行 */
+    }
+    
+    .block-top {
+        margin-bottom: 4px;
+    }
 
-@media (min-width: 769px) and (max-width: 960px) {
-    .image-container {
-        width: 600px;
-        
+    .block-pacman {
+        background: url(./img/pacman.svg);
+        width: 56px;
+        height: 15px;
+        margin-left: 10px;
+        background-size: 100%;
+        margin-top: 3px;
+    }
+
+    .block-text1 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .block-text2 {
+        font-size: 14px;
+        line-height: 21px;
     }
 
 }
 
-@media (min-width: 961px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 959px) {
+    #thesis {
+        align-items: start;
+        height: 920px; /*960-40(padding) */
+    }
+
     .image-container {
-        width: 720px;
-      
+        width: 608px; /* 720-112 */
+    }
+
+    .text-display-area {
+        height: 692px; /* 712-20(padding) */
+        min-width: 90%;
+        width: auto;
+        padding: 20px;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-left: 24px;
+        margin-right: 24px;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-display-area .detail-block {
+        height: 92px;
+        width: auto;
+        min-width: none;
+        max-width: none;
+        padding: 8px 16px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+        white-space: pre-wrap; /* 文本换行 */
+    }
+    
+    .block-top {
+        margin-bottom: 4px;
+    }
+
+    .block-pacman {
+        background: url(./img/pacman.svg);
+        width: 56px;
+        height: 15px;
+        margin-left: 10px;
+        background-size: 100%;
+        margin-top: 3px;
+    }
+
+    .block-text1 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .block-text2 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+    #thesis {
+        align-items: start;
+        height: 920px; /*960-40(padding) */
+    }
+
+    .image-container {
+        width: 752px; /* 864-112 */
+    }
+
+    .text-display-area {
+        height: 692px; /* 712-20(padding) */
+        min-width: 95%;
+        width: auto;
+        padding: 20px;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-left: 24px;
+        margin-right: 24px;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-display-area .detail-block {
+        height: 84px; /* 108-24(padding) */
+        width: auto;
+        min-width: none;
+        max-width: none;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        white-space: pre-wrap; /* 文本换行 */
+    }
+    
+    .block-top {
+        margin-bottom: 8px;
+    }
+
+    .block-text2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .text-display-area {
+        height: 848px; /* 根据需要调整 872-24(padding) 設計稿論文內容有誤故另調整高度*/
+        width: auto;
+        margin-left: 24px;
+        margin-right: 24px;
     }
 }

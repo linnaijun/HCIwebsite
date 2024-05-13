@@ -1,5 +1,5 @@
 .topics_box {
-    background: url(./img/Topics_bg.png)no-repeat center center;
+    background: url(./img/Topics_bg.svg)no-repeat center top;
     background-size: cover;
     padding: 120px 0px 120px 36px;
 }

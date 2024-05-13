@@ -10,7 +10,7 @@ import ArrowR from './img/ArrowR.svg';
 import ArrowR_A from './img/ArrowR_A.svg';
 import ArrowR_D from './img/ArrowR_D.svg';
 
-function Thesis({ height }) {
+function Thesis() {
   const [years, setYears] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedThesisDetails, setSelectedThesisDetails] = useState([]);
@@ -76,7 +76,7 @@ function Thesis({ height }) {
   };
 
   return (
-    <div id="thesis" style={{ height }}>
+    <div id="thesis">
       <div className="images-row">
         <img
           src={isPrevDisabled ? ArrowL_D : (isLeftActive ? ArrowL_A : ArrowL)}
@@ -129,10 +129,10 @@ function Thesis({ height }) {
             style={{ cursor: 'pointer' }}
           >
             <div className='block-top'>
-              <p className="block-text" style={{ textAlign: 'left', margin: 0 }}>作者: {detail.author}</p>
+              <p className="block-text1" style={{ textAlign: 'left', margin: 0 }}>{detail.author}</p>
               <div className='block-pacman'></div>
             </div>
-            <p className="block-text"style={{ textAlign: 'left', margin: 0 }}>標題: {detail.title}</p>
+            <p className="block-text2"style={{ textAlign: 'left', margin: 0 }}>{detail.title}</p>
           </div>
         ))}
       </div>
