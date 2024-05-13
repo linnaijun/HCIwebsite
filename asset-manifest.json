@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HCIwebsite/static/css/main.7415b51d.css",
+    "main.css": "/HCIwebsite/static/css/main.653b90d5.css",
     "main.js": "/HCIwebsite/static/js/main.b8d4e81e.js",
     "static/js/453.937314be.chunk.js": "/HCIwebsite/static/js/453.937314be.chunk.js",
     "static/media/GenSenRounded-H.ttc": "/HCIwebsite/static/media/GenSenRounded-H.5faec928091c8308b68a.ttc",
@@ -29,8 +29,6 @@
     "static/media/PlanetW.svg": "/HCIwebsite/static/media/PlanetW.29654abfea30503582f83b1d4cd6246e.svg",
     "static/media/professorFAN768.svg": "/HCIwebsite/static/media/professorFAN768.5c0c4187007fd3923a5a.svg",
     "static/media/professorFAN1440.svg": "/HCIwebsite/static/media/professorFAN1440.785b900dc155203246c4.svg",
-    "static/media/Thesis_bg.svg": "/HCIwebsite/static/media/Thesis_bg.49c5a4c0ad61ab761f96.svg",
-    "static/media/Topics_bg.svg": "/HCIwebsite/static/media/Topics_bg.dc02018d6e94b056dbe2.svg",
     "static/media/keyVisionRight768.svg": "/HCIwebsite/static/media/keyVisionRight768.806e64ecfc4b743fbf32.svg",
     "static/media/footer_logo.svg": "/HCIwebsite/static/media/footer_logo.be2cdee2012c086fb159ed6132507ace.svg",
     "static/media/keyVisionRight375.svg": "/HCIwebsite/static/media/keyVisionRight375.71cc18f8fd57b66e5de0.svg",
@@ -65,12 +63,12 @@
     "static/media/keyVisionBG1440.svg": "/HCIwebsite/static/media/keyVisionBG1440.71175f80643c3b95e080.svg",
     "static/media/keyVisionBG375.svg": "/HCIwebsite/static/media/keyVisionBG375.16d56913622dc46f5dfa.svg",
     "static/media/keyVisionBG768.svg": "/HCIwebsite/static/media/keyVisionBG768.fe4b67dd0e3a905520fd.svg",
-    "main.7415b51d.css.map": "/HCIwebsite/static/css/main.7415b51d.css.map",
+    "main.653b90d5.css.map": "/HCIwebsite/static/css/main.653b90d5.css.map",
     "main.b8d4e81e.js.map": "/HCIwebsite/static/js/main.b8d4e81e.js.map",
     "453.937314be.chunk.js.map": "/HCIwebsite/static/js/453.937314be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7415b51d.css",
+    "static/css/main.653b90d5.css",
     "static/js/main.b8d4e81e.js"
   ]
 }
