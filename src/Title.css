@@ -4,6 +4,7 @@
     position: relative;
     justify-content: center;
     /* z-index: -1; */
+    transition: all ease-in-out .4s;
 }
 
 .title_bg {
