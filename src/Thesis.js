@@ -16,7 +16,6 @@ function Thesis() {
   const [selectedThesisDetails, setSelectedThesisDetails] = useState([]);
   const imageContainerRef = useRef(null);
   const detailsContainerRef = useRef(null);
-
   const [isLeftActive, setIsLeftActive] = useState(false);
   const [isRightActive, setIsRightActive] = useState(false);
 

@@ -199,7 +199,7 @@ function App() {
             </p>
           </div>
           <div className="footer_right">
-  <a href="https://maps.app.goo.gl/1QJNthfZHUrb42yr7" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.google.com/maps/place/%E5%9C%8B%E7%AB%8B%E5%8F%B0%E5%8C%97%E6%95%99%E8%82%B2%E5%A4%A7%E5%AD%B8%E5%89%B5%E6%84%8F%E9%A4%A8/@25.0229703,121.5415602,17z/data=!3m1!4b1!4m6!3m5!1s0x3442aa2f21d7dbd9:0xa37f4feaf6c45c23!8m2!3d25.0229703!4d121.5441351!16s%2Fg%2F11c5xm6fc1?authuser=0&entry=ttu" target="_blank" rel="noopener noreferrer">
     <img src={footer_map} alt="footer_map" />
   </a>
   <ul>
