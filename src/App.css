@@ -224,6 +224,7 @@
     0 9px 28px rgba(0, 0, 0, 0.05),
     0 6px 16px rgba(0, 0, 0, 0.08);
   /* 初始陰影效果 */
+  z-index: 50;
 }
 
 .scrollToTopButton:hover {
@@ -337,7 +338,7 @@ footer:after {
 }
 
 .footer_left .footer_text h3 {
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded M";
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
@@ -349,7 +350,7 @@ footer:after {
 .footer_left .footer_text p {
   text-align: left;
   color: #fff;
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded M";
   font-size: 14px;
   font-style: normal;
   line-height: 1.5;
@@ -363,7 +364,7 @@ footer:after {
   text-align: left;
   color: #fff;
   padding-top: 30px;
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded M";
   font-size: 14px;
   font-style: normal;
   line-height: 1.5;
@@ -381,7 +382,7 @@ footer:after {
 .footer_right ul {
   color: #fff;
   text-align: left;
-  font-family: "GenSenRounded TW";
+  font-family: "GenSenRounded M";
   font-size: 18px;
   font-style: normal;
   margin: 0;
