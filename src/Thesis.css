@@ -15,7 +15,7 @@
     background-repeat: repeat;
     background-position: center;
     background-size: 128px 128px;
-    height: 1086px; /*1126-40(padding) */
+    height: 920px; /*960-40(padding) */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@
     flex-wrap: wrap;
     align-content: flex-start; /* 确保多行内容时也能向上对齐 */
     overflow-y: auto; /* 允许垂直滚动 */
-    height: 848px; /* 根据需要调整 872-24(padding) */
+    height: 688px; /* 根据需要调整 712-24(padding) */
     width: 1168px; /* 根据需要调整 1216-48(padding)*/
     padding: 24px;
     padding-right: 0px;
@@ -121,7 +121,7 @@
     margin-top: 20px;
     justify-content: flex-start; /* 确保子元素从容器的开始处排列 */
     border-radius: 32px;
-    border: 0.50px #7EC0FC solid;
+    border: 0.5px #7EC0FC solid;
     transition: all ease-in-out .4s;
 }
 
@@ -291,8 +291,7 @@
 
 @media (min-width: 768px) and (max-width: 959px) {
     #thesis {
-        align-items: start;
-        height: 920px; /*960-40(padding) */
+        height: 760px; /*800-40(padding) */
     }
 
     .image-container {
@@ -300,8 +299,8 @@
     }
 
     .text-display-area {
-        height: 692px; /* 712-20(padding) */
-        min-width: 90%;
+        height: 556px; /* 576-20(padding) */
+        min-width: calc(100% - 68px);
         width: auto;
         padding: 20px;
         padding-right: 0;
@@ -350,8 +349,7 @@
 
 @media (min-width: 960px) and (max-width: 1279px) {
     #thesis {
-        align-items: start;
-        height: 920px; /*960-40(padding) */
+        height: 760px; /*800-40(padding) */
     }
 
     .image-container {
@@ -359,8 +357,8 @@
     }
 
     .text-display-area {
-        height: 692px; /* 712-20(padding) */
-        min-width: 95%;
+        height: 556px; /* 576-20(padding) */
+        min-width: calc(100% - 68px);
         width: auto;
         padding: 20px;
         padding-right: 0;
@@ -394,7 +392,7 @@
 
 @media (min-width: 1280px) and (max-width: 1439px) {
     .text-display-area {
-        height: 848px; /* 根据需要调整 872-24(padding) 設計稿論文內容有誤故另調整高度*/
+        height: 688px; /* 根据需要调整 712-24(padding) 設計稿論文內容有誤故另調整高度*/
         width: auto;
         margin-left: 24px;
         margin-right: 24px;
