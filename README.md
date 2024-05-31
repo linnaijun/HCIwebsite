@@ -11,4 +11,3 @@
 
 ### 程式啟動：
 npm install
-npm start
